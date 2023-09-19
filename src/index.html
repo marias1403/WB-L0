@@ -9,6 +9,50 @@
 <body class="page">
   <div class="page__container">
     <header class="header page__header section">
+      <div class="header__container">
+        <div class="header__logo-wrapper">
+          <button class="burger-menu button"></button>
+          <a href="/">
+            <picture>
+              <source
+                srcset="<%=require('./images/logo_mobile.svg')%>"
+                media="(max-width: 767px)"
+                width="198"
+                height="auto">
+              <img class="header__logo" src="<%=require('./images/logo.svg')%>" alt="Логотип Товары и точка" />
+            </picture>
+          </a>
+        </div>
+        <form class="header__search-form">
+          <input
+            class="header__search-input"
+            id='searchGoods'
+            type='text'
+            name='searchGoods'
+            placeholder='Я ищу...'
+            aria-label='searchGoods'
+          />
+          <button class="header__search-button button" type="submit"></button>
+        </form>
+        <nav class="header__nav">
+          <ul class="header__nav-container">
+            <li class="header__nav-item">
+              <a href="/" class="header__nav-link">
+                <img class="header__nav-icon" src="<%=require('./images/profile_icon.svg')%>" alt="Иконка профиля"/>
+                <span class="header__nav-span">Профиль</span>
+              </a>
+            </li>
+            <li class="header__nav-item">
+              <span class="header__nav-notify">3</span>
+              <a href="/" class="header__nav-link">
+                <img class="header__nav-icon header__nav-icon_cart" src="<%=require('./images/cart_icon.svg')%>" alt="Иконка корзины"/>
+                <span class="header__nav-span">Корзина</span>
+              </a>
+            </li>
+          </ul>
+        </nav>
+        <button class="header__mobile-search button"></button>
+      </div>
     </header>
     <main class="content page__content">
       <section class="section content__section">

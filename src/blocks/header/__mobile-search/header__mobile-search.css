@@ -1,0 +1,17 @@
+.header__mobile-search {
+  display: none;
+  width: 28px;
+  height: 28px;
+  border: none;
+  background-color: transparent;
+  background-image: url(../../../images/search_icon_mobile.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 28px 28px;
+}
+
+@media screen and (max-width: 767px) {
+  .header__mobile-search {
+    display: block;
+  }
+}
