@@ -17,6 +17,7 @@
 @import url(../blocks/section/__subtext/_link/section__subtext_link.css);
 @import url(../blocks/section/__subtext/_padding-left-4/section__subtext_padding-left-4.css);
 @import url(../blocks/section/__subtext/_grey/section__subtext_grey.css);
+@import url(../blocks/section/__subtext/_recipient/section__subtext_recipient.css);
 
 @import url(../blocks/content/content.css);
 @import url(../blocks/page/__content/page__content.css);
@@ -88,6 +89,15 @@
 @import url(../blocks/delivery-method/__address-work-hours/delivery-method__address-work-hours.css);
 
 @import url(../blocks/payment-method/payment-method.css);
+@import url(../blocks/recipient/recipient.css);
+@import url(../blocks/info-block/_recipient/info-block_recipient.css);
+@import url(../blocks/recipient/__form/recipient__form.css);
+@import url(../blocks/recipient/__form-row/recipient__form-row.css);
+@import url(../blocks/recipient/__form-row/recipient__form-row.css);
+@import url(../blocks/recipient/__form-row/_row/recipient__form-row_second.css);
+@import url(../blocks/recipient/__input-wrapper/recipient__input-wrapper.css);
+@import url(../blocks/recipient/__input/recipient__input.css);
+@import url(../blocks/recipient/__label/recipient__label.css);
 
 @import url(../blocks/footer/footer.css);
 @import url(../blocks/page/__footer/page__footer.css);

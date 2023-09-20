@@ -1,0 +1,7 @@
+.section__subtext_recipient {
+  position: absolute;
+  top: 50px;
+  left: 0;
+  font-size: 12px;
+  line-height: 14px;
+}

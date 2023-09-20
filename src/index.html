@@ -189,6 +189,76 @@
             <p class="section__subtext section__subtext_grey">Спишем оплату с карты при получении</p>
           </div>
         </section>
+        <section class="recipient info-block info-block_gap-16 info-block_recipient">
+          <h2 class="section__title">Получатель</h2>
+          <form class="recipient__form">
+            <div class="recipient__form-row">
+              <div class="recipient__input-wrapper">
+                <label class="recipient__label" for="recipientName">Имя</label>
+                <input
+                  id="recipientName"
+                  type="text"
+                  name="recipientName"
+                  class="recipient__input"
+                  placeholder="Имя"
+                  aria-label="Имя"
+                  required
+                  min="2">
+              </div>
+              <div class="recipient__input-wrapper">
+                <label class="recipient__label" for="recipientLastName">Фамилия</label>
+                <input
+                  id="recipientLastName"
+                  type="text"
+                  name="recipientLastName"
+                  class="recipient__input"
+                  placeholder="Фамилия"
+                  aria-label="Фамилия"
+                  required
+                  min="2">
+              </div>
+            </div>
+            <div class="recipient__form-row recipient__form-row_second">
+              <div class="recipient__input-wrapper">
+                <label class="recipient__label" for="recipientEmail">Почта</label>
+                <input
+                  id="recipientEmail"
+                  type="email"
+                  name="recipientEmail"
+                  class="recipient__input"
+                  placeholder="Почта"
+                  aria-label="Почта"
+                  required>
+              </div>
+              <div class="recipient__input-wrapper">
+                <label class="recipient__label" for="recipientPhoneNumber">Телефон</label>
+                <input
+                  id="recipientPhoneNumber"
+                  type="text"
+                  name="recipientPhoneNumber"
+                  class="recipient__input"
+                  placeholder="Телефон"
+                  aria-label="Телефон"
+                  required
+                  min="11"
+                  max="30">
+              </div>
+              <div class="recipient__input-wrapper">
+                <label class="recipient__label" for="recipientINN">ИНН</label>
+                <input
+                  id="recipientINN"
+                  type="text"
+                  name="recipientINN"
+                  class="recipient__input"
+                  placeholder="ИНН"
+                  aria-label="ИНН"
+                  required
+                  size="14">
+                <span class="section__subtext section__subtext_recipient">Для таможенного оформления</span>
+              </div>
+            </div>
+          </form>
+        </section>
 <!--        <section class="section content__section">-->
 <!--          <form>-->
 <!--            <fieldset>-->

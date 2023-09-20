@@ -1,0 +1,10 @@
+.recipient__form-row {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  column-gap: 24px;
+  justify-items: stretch;
+  align-items: center;
+  justify-content: stretch;
+  align-content: start;
+}

@@ -1,0 +1,3 @@
+.recipient__form-row_second {
+  grid-template-columns: repeat(3, 1fr);
+}
