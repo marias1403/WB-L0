@@ -1,0 +1,17 @@
+.checkbox {
+  width: 22px;
+  height: 22px;
+  position: relative;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.checkbox:hover {
+  background-image: url(../../images/checkbox_icon_hover.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 22px 22px;
+}

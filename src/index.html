@@ -54,9 +54,94 @@
         <button class="header__mobile-search button"></button>
       </div>
     </header>
-    <main class="content page__content">
-      <section class="section content__section">
-      </section>
+    <main class="main content page__content">
+      <div class="main__container">
+        <aside class="order-summary info-block">
+          <div class="order-summary__cost-details">
+            <div class="order-summary__cost-detail-row">
+              <h2 class="section__title section__title_cost-details">Итого</h2>
+              <h2 class="section__title section__title_cost-details">2 101 063<span class="section__title section__title_cost-details section__title_currency">сом</span></h2>
+            </div>
+            <div class="order-summary__cost-detail-row">
+              <p class="section__text">203 товара</p>
+              <p class="section__text">2 302 048 сом</p>
+            </div>
+            <div class="order-summary__cost-detail-row">
+              <p class="section__text">Скидка</p>
+              <p class="section__text">−200 985 сом</p>
+            </div>
+            <div class="order-summary__cost-detail-row">
+              <p class="section__text">Доставка</p>
+              <p class="section__text">Бесплатно</p>
+            </div>
+          </div>
+          <div class="order-summary__order-details">
+            <div class="order-summary__address-text-wrapper">
+              <div class="order-summary__subtitle-wrapper">
+                <h3 class="section__subtitle">Доставка в пункт выдачи</h3>
+                <button class="order-summary__edit-button button"></button>
+              </div>
+              <p class="section__subtext">Бишкек, улица Ахматбека Суюмбаева, 12/1</p>
+              <p class="section__subtext section__subtext_purple">5–8 фев</p>
+            </div>
+            <div class="order-summary__highlighted-info">
+              <div class="order-summary__shipping-info">
+                <img class="order-summary__shipping-icon" src="<%=require('./images/free_shipping_icon.svg')%>" alt="Бесплатная доставка при отказе"/>
+                <p class="section__subtext">Обратная доставка товаров на склад при отказе — <span class="section__subtext section__subtext_green">бесплатно</span></p>
+              </div>
+            </div>
+          </div>
+          <div class="order-summary__order-details">
+            <div class="order-summary__text-wrapper">
+              <div class="order-summary__subtitle-wrapper">
+                <h3 class="section__subtitle">Оплата картой</h3>
+                <button class="order-summary__edit-button button"></button>
+              </div>
+              <div class="order-summary__card-wrapper">
+                <div class="order-summary__card-icon-background">
+                  <img class="order-summary__card-icon" src="<%=require('./images/mir.svg')%>" alt="Банковская карта Мир" />
+                </div>
+                <p class="section__subtext">1234 12•• •••• 1234</p>
+              </div>
+            </div>
+            <div class="order-summary__highlighted-info">
+              <div class="order-summary__checkbox-wrapper">
+                <div class="checkbox">
+                  <input type="checkbox" class="checkbox__input" id="immediate-payment">
+                  <span class="checkbox__span"></span>
+                </div>
+                <label for="immediate-payment" class="section__subtext">Списать оплату сразу</label>
+              </div>
+              <p class="section__subtext">Спишем оплату с карты при получении</p>
+            </div>
+          </div>
+          <div class="order-summary__button-wrapper">
+            <button class="submit-button submit-button_order-summary button">Заказать</button>
+            <div class="order-summary__terms-of-use-container">
+              <img src="<%=require('./images/terms_of_use_icon.svg')%>" />
+              <span class="section__subtext">Соглашаюсь <a href="/" class="section__subtext section__subtext_link">с правилами пользования торговой площадкой</a> и <a href="/" class="section__subtext section__subtext_link">возврата</a></span>
+            </div>
+          </div>
+        </aside>
+<!--        <section class="section content__section">-->
+<!--          <form>-->
+<!--            <fieldset>-->
+<!--              <legend>Корзина</legend>-->
+<!--              <div>-->
+<!--                <input type="checkbox" id="t-shirt" name="t-shirt" value="t-shirt" />-->
+<!--                <img />-->
+<!--                <label>Футболка UZcotton мужская</label>-->
+<!--                <span>Цвет: белый</span>-->
+<!--                <span>Размер: 56</span>-->
+<!--                <span>Коледино WB</span>-->
+<!--                <span>OOO Вайлдберриз</span>-->
+<!--                <h3>522 сом</h3>-->
+<!--                <span>1051 сом</span>-->
+<!--              </div>-->
+<!--            </fieldset>-->
+<!--          </form>-->
+<!--        </section>-->
+      </div>
     </main>
     <footer class="footer section page__footer">
       <p class="footer__copyright">&#169; 2022  ООО «Товары и точка»</p>

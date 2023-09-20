@@ -1,9 +1,7 @@
-.header__container {
-  max-width: 1400px;
-  margin: 0 auto;
+.order-summary__cost-detail-row {
+  width: 100%;
   display: flex;
   flex-direction: row;
   align-items: center;
   justify-content: space-between;
-  gap: 32px;
 }

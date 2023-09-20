@@ -1,0 +1,9 @@
+.order-summary__card-icon-background {
+  display: flex;
+  width: 32px;
+  height: 24px;
+  justify-content: center;
+  align-items: center;
+  border-radius: 4px;
+  background: #F6F6FA;
+}

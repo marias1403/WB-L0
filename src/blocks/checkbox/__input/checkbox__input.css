@@ -1,0 +1,16 @@
+.checkbox__input {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 22px;
+  height: 22px;
+  cursor: pointer;
+  opacity: 0;
+}
+
+.checkbox__input:checked ~ .checkbox__span {
+  background-image: url(../../../images/checkbox_icon_checked.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 22px 22px;
+}

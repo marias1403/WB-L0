@@ -1,0 +1,16 @@
+.checkbox__span {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 22px;
+  width: 22px;
+  background-color: transparent;
+  background-image: url(../../../images/checkbox_icon.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 22px 22px;
+}
+
+.checkbox__span:hover {
+  background-image: none;
+}

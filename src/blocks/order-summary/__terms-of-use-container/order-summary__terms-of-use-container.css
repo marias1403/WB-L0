@@ -1,0 +1,8 @@
+.order-summary__terms-of-use-container {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: flex-start;
+  gap: 8px;
+}
