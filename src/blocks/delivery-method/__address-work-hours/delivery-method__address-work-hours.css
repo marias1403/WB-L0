@@ -1,0 +1,8 @@
+.delivery-method__address-work-hours {
+  margin-top: 4px;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-end;
+  justify-content: flex-start;
+  gap: 4px;
+}

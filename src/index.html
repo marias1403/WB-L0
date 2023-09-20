@@ -43,7 +43,7 @@
               </a>
             </li>
             <li class="header__nav-item">
-              <span class="header__nav-notify">3</span>
+              <span class="item-count-badge item-count-badge_header">3</span>
               <a href="/" class="header__nav-link">
                 <img class="header__nav-icon header__nav-icon_cart" src="<%=require('./images/cart_icon.svg')%>" alt="Иконка корзины"/>
                 <span class="header__nav-span">Корзина</span>
@@ -54,11 +54,11 @@
         <button class="header__mobile-search button"></button>
       </div>
     </header>
-    <main class="main content page__content">
-      <div class="main__container">
+    <main class="main page__content">
+      <div class="main__container content">
         <aside class="order-summary info-block">
           <div class="order-summary__cost-details">
-            <div class="order-summary__cost-detail-row">
+            <div class="info-block__title-wrapper">
               <h2 class="section__title section__title_cost-details">Итого</h2>
               <h2 class="section__title section__title_cost-details">2 101 063<span class="section__title section__title_cost-details section__title_currency">сом</span></h2>
             </div>
@@ -123,6 +123,56 @@
             </div>
           </div>
         </aside>
+        <section class="delivery-method info-block info-block_delivery-method">
+          <div class="info-block__title-wrapper">
+            <h2 class="section__title">Способ доставки</h2>
+            <button class="change-button button">Изменить</button>
+          </div>
+          <div class="delivery-method__row">
+            <h3 class="section__subtitle section__subtitle_semibold delivery-method__flex-column">Пункт выдачи</h3>
+            <div class="delivery-method__address-wrapper">
+              <p class="section__text">Бишкек, улица Ахматбека Суюмбаева, 12/1</p>
+              <div class="delivery-method__address-work-hours">
+                <img class="delivery-method__rating-icon" src="<%=require('./images/rating_icon.svg')%>" alt="Рейтинг"/>
+                <span class="section__subtext">4.99</span>
+                <span class="section__subtext section__subtext_delivery-method">Ежедневно с 10 до 21 </span>
+              </div>
+            </div>
+          </div>
+          <div class="delivery-method__row">
+            <h3 class="section__subtitle section__subtitle_semibold delivery-method__flex-column">Стоимость доставки</h3>
+            <p class="section__text">Бесплатно</p>
+          </div>
+          <div class="delivery-method__row">
+            <h3 class="section__subtitle section__subtitle_semibold delivery-method__flex-column">5—6 февраля</h3>
+            <ul class="delivery-method__goods-photos">
+              <li class="delivery-method__goods-photo-item">
+                <img class="delivery-method__goods-photo-img" src="<%=require('./images/tshirt_UZcotton.png')%>" alt="Футболка UZcotton мужская" />
+              </li>
+              <li class="delivery-method__goods-photo-item">
+                <span class="item-count-badge item-count-badge_delivery-method">184</span>
+                <img class="delivery-method__goods-photo-img" src="<%=require('./images/cardholder.jpg')%>" alt="Футболка UZcotton мужская" />
+              </li>
+              <li class="delivery-method__goods-photo-item">
+                <span class="item-count-badge item-count-badge_delivery-method">2</span>
+                <img class="delivery-method__goods-photo-img" src="<%=require('./images/faber_castell.jpg')%>" alt="Футболка UZcotton мужская" />
+              </li>
+            </ul>
+          </div>
+          <div class="delivery-method__row">
+            <h3 class="section__subtitle section__subtitle_semibold delivery-method__flex-column">7—8 февраля</h3>
+            <ul class="delivery-method__goods-photos">
+              <li class="delivery-method__goods-photo-item">
+                <span class="item-count-badge item-count-badge_delivery-method">16</span>
+                <img class="delivery-method__goods-photo-img" src="<%=require('./images/tshirt_UZcotton.png')%>" alt="Футболка UZcotton мужская" />
+              </li>
+            </ul>
+          </div>
+          <div class="delivery-method__free-return-info">
+            <img class="delivery-method__shipping-icon" src="<%=require('./images/free_shipping_icon.svg')%>" alt="Бесплатная доставка при отказе" />
+            <span class="section__subtext">Обратная доставка товаров на склад при отказе — <span class="section__subtext section__subtext_green">бесплатно</span></span>
+          </div>
+        </section>
 <!--        <section class="section content__section">-->
 <!--          <form>-->
 <!--            <fieldset>-->
