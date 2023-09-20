@@ -56,7 +56,178 @@
     </header>
     <main class="main page__content">
       <div class="main__container content">
-        <aside class="order-summary info-block">
+        <div class="content__column">
+          <section class="section content__section">
+            <form>
+              <fieldset>
+                <legend>Корзина</legend>
+                <div>
+                  <input type="checkbox" id="t-shirt" name="t-shirt" value="t-shirt"/>
+                  <img/>
+                  <label>Футболка UZcotton мужская</label>
+                  <span>Цвет: белый</span>
+                  <span>Размер: 56</span>
+                  <span>Коледино WB</span>
+                  <span>OOO Вайлдберриз</span>
+                  <h3>522 сом</h3>
+                  <span>1051 сом</span>
+                </div>
+              </fieldset>
+            </form>
+          </section>
+          <section class="absent-goods content__section section">
+            <h2 class="section__subtitle section__subtitle_semibold">Отсутствуют &#183; 3 товара</h2>
+            <button class="dropdown__button"></button>
+            <hr>
+            <ul>
+              <li>
+                <img />
+                <h3>Футболка UZcotton мужская</h3>
+                <span>Цвет: белый</span>
+                <span>Размер: 56</span>
+                <button></button>
+                <button></button>
+              </li>
+            </ul>
+          </section>
+          <section class="delivery-method info-block info-block_gap-16 content__section section">
+            <div class="info-block__title-wrapper">
+              <h2 class="section__title">Способ доставки</h2>
+              <button class="change-button button">Изменить</button>
+            </div>
+            <div class="delivery-method__row">
+              <h3 class="section__subtitle section__subtitle_semibold delivery-method__flex-column">Пункт выдачи</h3>
+              <div class="delivery-method__address-wrapper">
+                <p class="section__text">Бишкек, улица Ахматбека Суюмбаева, 12/1</p>
+                <div class="delivery-method__address-work-hours">
+                  <img class="delivery-method__rating-icon" src="<%=require('./images/rating_icon.svg')%>" alt="Рейтинг"/>
+                  <span class="section__subtext">4.99</span>
+                  <span class="section__subtext section__subtext_padding-left-4">Ежедневно с 10 до 21 </span>
+                </div>
+              </div>
+            </div>
+            <div class="delivery-method__row">
+              <h3 class="section__subtitle section__subtitle_semibold delivery-method__flex-column">Стоимость доставки</h3>
+              <p class="section__text">Бесплатно</p>
+            </div>
+            <div class="delivery-method__row">
+              <h3 class="section__subtitle section__subtitle_semibold delivery-method__flex-column">5—6 февраля</h3>
+              <ul class="delivery-method__goods-photos">
+                <li class="delivery-method__goods-photo-item">
+                  <img class="delivery-method__goods-photo-img" src="<%=require('./images/tshirt_UZcotton.png')%>" alt="Футболка UZcotton мужская" />
+                </li>
+                <li class="delivery-method__goods-photo-item">
+                  <span class="item-count-badge item-count-badge_delivery-method">184</span>
+                  <img class="delivery-method__goods-photo-img" src="<%=require('./images/cardholder.jpg')%>" alt="Футболка UZcotton мужская" />
+                </li>
+                <li class="delivery-method__goods-photo-item">
+                  <span class="item-count-badge item-count-badge_delivery-method">2</span>
+                  <img class="delivery-method__goods-photo-img" src="<%=require('./images/faber_castell.jpg')%>" alt="Футболка UZcotton мужская" />
+                </li>
+              </ul>
+            </div>
+            <div class="delivery-method__row">
+              <h3 class="section__subtitle section__subtitle_semibold delivery-method__flex-column">7—8 февраля</h3>
+              <ul class="delivery-method__goods-photos">
+                <li class="delivery-method__goods-photo-item">
+                  <span class="item-count-badge item-count-badge_delivery-method">16</span>
+                  <img class="delivery-method__goods-photo-img" src="<%=require('./images/tshirt_UZcotton.png')%>" alt="Футболка UZcotton мужская" />
+                </li>
+              </ul>
+            </div>
+            <div class="delivery-method__free-return-info">
+              <img class="delivery-method__shipping-icon" src="<%=require('./images/free_shipping_icon.svg')%>" alt="Бесплатная доставка при отказе" />
+              <span class="section__subtext">Обратная доставка товаров на склад при отказе — <span class="section__subtext section__subtext_green">бесплатно</span></span>
+            </div>
+          </section>
+          <section class="payment-method info-block info-block_gap-16 content__section section">
+            <div class="info-block__title-wrapper">
+              <h2 class="section__title">Способ оплаты</h2>
+              <button class="change-button button">Изменить</button>
+            </div>
+            <div class="payment-method__content-wrapper">
+              <div class="credit-card-number">
+                <div class="credit-card-number__card-icon-background">
+                  <img class="credit-card-number__card-icon" src="<%=require('./images/mir.svg')%>" alt="Банковская карта Мир" />
+                </div>
+                <span class="section__text">1234 56•• •••• 1234</span>
+                <span class="section__text section__subtext_padding-left-4">01/30</span>
+              </div>
+              <p class="section__subtext section__subtext_grey">Спишем оплату с карты при получении</p>
+            </div>
+          </section>
+          <section class="recipient info-block info-block_gap-16 info-block_recipient content__section section">
+            <h2 class="section__title">Получатель</h2>
+            <form class="recipient__form">
+              <div class="recipient__form-row">
+                <div class="recipient__input-wrapper">
+                  <label class="recipient__label" for="recipientName">Имя</label>
+                  <input
+                    id="recipientName"
+                    type="text"
+                    name="recipientName"
+                    class="recipient__input"
+                    placeholder="Имя"
+                    aria-label="Имя"
+                    required
+                    min="2">
+                </div>
+                <div class="recipient__input-wrapper">
+                  <label class="recipient__label" for="recipientLastName">Фамилия</label>
+                  <input
+                    id="recipientLastName"
+                    type="text"
+                    name="recipientLastName"
+                    class="recipient__input"
+                    placeholder="Фамилия"
+                    aria-label="Фамилия"
+                    required
+                    min="2">
+                </div>
+              </div>
+              <div class="recipient__form-row recipient__form-row_second">
+                <div class="recipient__input-wrapper">
+                  <label class="recipient__label" for="recipientEmail">Почта</label>
+                  <input
+                    id="recipientEmail"
+                    type="email"
+                    name="recipientEmail"
+                    class="recipient__input"
+                    placeholder="Почта"
+                    aria-label="Почта"
+                    required>
+                </div>
+                <div class="recipient__input-wrapper">
+                  <label class="recipient__label" for="recipientPhoneNumber">Телефон</label>
+                  <input
+                    id="recipientPhoneNumber"
+                    type="text"
+                    name="recipientPhoneNumber"
+                    class="recipient__input"
+                    placeholder="Телефон"
+                    aria-label="Телефон"
+                    required
+                    min="11"
+                    max="30">
+                </div>
+                <div class="recipient__input-wrapper">
+                  <label class="recipient__label" for="recipientINN">ИНН</label>
+                  <input
+                    id="recipientINN"
+                    type="text"
+                    name="recipientINN"
+                    class="recipient__input"
+                    placeholder="ИНН"
+                    aria-label="ИНН"
+                    required
+                    size="14">
+                  <span class="section__subtext section__subtext_recipient">Для таможенного оформления</span>
+                </div>
+              </div>
+            </form>
+          </section>
+        </div>
+        <aside class="order-summary info-block content__section section">
           <div class="order-summary__cost-details">
             <div class="info-block__title-wrapper">
               <h2 class="section__title section__title_cost-details">Итого</h2>
@@ -123,160 +294,6 @@
             </div>
           </div>
         </aside>
-        <section class="delivery-method info-block info-block_gap-16">
-          <div class="info-block__title-wrapper">
-            <h2 class="section__title">Способ доставки</h2>
-            <button class="change-button button">Изменить</button>
-          </div>
-          <div class="delivery-method__row">
-            <h3 class="section__subtitle section__subtitle_semibold delivery-method__flex-column">Пункт выдачи</h3>
-            <div class="delivery-method__address-wrapper">
-              <p class="section__text">Бишкек, улица Ахматбека Суюмбаева, 12/1</p>
-              <div class="delivery-method__address-work-hours">
-                <img class="delivery-method__rating-icon" src="<%=require('./images/rating_icon.svg')%>" alt="Рейтинг"/>
-                <span class="section__subtext">4.99</span>
-                <span class="section__subtext section__subtext_padding-left-4">Ежедневно с 10 до 21 </span>
-              </div>
-            </div>
-          </div>
-          <div class="delivery-method__row">
-            <h3 class="section__subtitle section__subtitle_semibold delivery-method__flex-column">Стоимость доставки</h3>
-            <p class="section__text">Бесплатно</p>
-          </div>
-          <div class="delivery-method__row">
-            <h3 class="section__subtitle section__subtitle_semibold delivery-method__flex-column">5—6 февраля</h3>
-            <ul class="delivery-method__goods-photos">
-              <li class="delivery-method__goods-photo-item">
-                <img class="delivery-method__goods-photo-img" src="<%=require('./images/tshirt_UZcotton.png')%>" alt="Футболка UZcotton мужская" />
-              </li>
-              <li class="delivery-method__goods-photo-item">
-                <span class="item-count-badge item-count-badge_delivery-method">184</span>
-                <img class="delivery-method__goods-photo-img" src="<%=require('./images/cardholder.jpg')%>" alt="Футболка UZcotton мужская" />
-              </li>
-              <li class="delivery-method__goods-photo-item">
-                <span class="item-count-badge item-count-badge_delivery-method">2</span>
-                <img class="delivery-method__goods-photo-img" src="<%=require('./images/faber_castell.jpg')%>" alt="Футболка UZcotton мужская" />
-              </li>
-            </ul>
-          </div>
-          <div class="delivery-method__row">
-            <h3 class="section__subtitle section__subtitle_semibold delivery-method__flex-column">7—8 февраля</h3>
-            <ul class="delivery-method__goods-photos">
-              <li class="delivery-method__goods-photo-item">
-                <span class="item-count-badge item-count-badge_delivery-method">16</span>
-                <img class="delivery-method__goods-photo-img" src="<%=require('./images/tshirt_UZcotton.png')%>" alt="Футболка UZcotton мужская" />
-              </li>
-            </ul>
-          </div>
-          <div class="delivery-method__free-return-info">
-            <img class="delivery-method__shipping-icon" src="<%=require('./images/free_shipping_icon.svg')%>" alt="Бесплатная доставка при отказе" />
-            <span class="section__subtext">Обратная доставка товаров на склад при отказе — <span class="section__subtext section__subtext_green">бесплатно</span></span>
-          </div>
-        </section>
-        <section class="payment-method info-block info-block_gap-16">
-          <div class="info-block__title-wrapper">
-            <h2 class="section__title">Способ оплаты</h2>
-            <button class="change-button button">Изменить</button>
-          </div>
-          <div class="payment-method__content-wrapper">
-            <div class="credit-card-number">
-              <div class="credit-card-number__card-icon-background">
-                <img class="credit-card-number__card-icon" src="<%=require('./images/mir.svg')%>" alt="Банковская карта Мир" />
-              </div>
-              <span class="section__text">1234 56•• •••• 1234</span>
-              <span class="section__text section__subtext_padding-left-4">01/30</span>
-            </div>
-            <p class="section__subtext section__subtext_grey">Спишем оплату с карты при получении</p>
-          </div>
-        </section>
-        <section class="recipient info-block info-block_gap-16 info-block_recipient">
-          <h2 class="section__title">Получатель</h2>
-          <form class="recipient__form">
-            <div class="recipient__form-row">
-              <div class="recipient__input-wrapper">
-                <label class="recipient__label" for="recipientName">Имя</label>
-                <input
-                  id="recipientName"
-                  type="text"
-                  name="recipientName"
-                  class="recipient__input"
-                  placeholder="Имя"
-                  aria-label="Имя"
-                  required
-                  min="2">
-              </div>
-              <div class="recipient__input-wrapper">
-                <label class="recipient__label" for="recipientLastName">Фамилия</label>
-                <input
-                  id="recipientLastName"
-                  type="text"
-                  name="recipientLastName"
-                  class="recipient__input"
-                  placeholder="Фамилия"
-                  aria-label="Фамилия"
-                  required
-                  min="2">
-              </div>
-            </div>
-            <div class="recipient__form-row recipient__form-row_second">
-              <div class="recipient__input-wrapper">
-                <label class="recipient__label" for="recipientEmail">Почта</label>
-                <input
-                  id="recipientEmail"
-                  type="email"
-                  name="recipientEmail"
-                  class="recipient__input"
-                  placeholder="Почта"
-                  aria-label="Почта"
-                  required>
-              </div>
-              <div class="recipient__input-wrapper">
-                <label class="recipient__label" for="recipientPhoneNumber">Телефон</label>
-                <input
-                  id="recipientPhoneNumber"
-                  type="text"
-                  name="recipientPhoneNumber"
-                  class="recipient__input"
-                  placeholder="Телефон"
-                  aria-label="Телефон"
-                  required
-                  min="11"
-                  max="30">
-              </div>
-              <div class="recipient__input-wrapper">
-                <label class="recipient__label" for="recipientINN">ИНН</label>
-                <input
-                  id="recipientINN"
-                  type="text"
-                  name="recipientINN"
-                  class="recipient__input"
-                  placeholder="ИНН"
-                  aria-label="ИНН"
-                  required
-                  size="14">
-                <span class="section__subtext section__subtext_recipient">Для таможенного оформления</span>
-              </div>
-            </div>
-          </form>
-        </section>
-<!--        <section class="section content__section">-->
-<!--          <form>-->
-<!--            <fieldset>-->
-<!--              <legend>Корзина</legend>-->
-<!--              <div>-->
-<!--                <input type="checkbox" id="t-shirt" name="t-shirt" value="t-shirt" />-->
-<!--                <img />-->
-<!--                <label>Футболка UZcotton мужская</label>-->
-<!--                <span>Цвет: белый</span>-->
-<!--                <span>Размер: 56</span>-->
-<!--                <span>Коледино WB</span>-->
-<!--                <span>OOO Вайлдберриз</span>-->
-<!--                <h3>522 сом</h3>-->
-<!--                <span>1051 сом</span>-->
-<!--              </div>-->
-<!--            </fieldset>-->
-<!--          </form>-->
-<!--        </section>-->
       </div>
     </main>
     <footer class="footer section page__footer">

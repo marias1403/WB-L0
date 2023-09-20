@@ -1,5 +1,9 @@
 .content {
   display: grid;
-  flex-shrink: 0;
-  grid-row-gap: 40px;
+  grid-template-columns: 1fr minmax(303px, 429px);
+  grid-column-gap: 32px;
+  justify-items: stretch;
+  align-items: start;
+  justify-content: stretch;
+  align-content: start;
 }

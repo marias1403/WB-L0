@@ -21,6 +21,7 @@
 
 @import url(../blocks/content/content.css);
 @import url(../blocks/page/__content/page__content.css);
+@import url(../blocks/content/__column/content__column.css);
 @import url(../blocks/content/__section/content__section.css);
 
 @import url(../blocks/header/header.css);
@@ -75,7 +76,6 @@
 @import url(../blocks/credit-card-number/__card-icon-background/credit-card-number__card-icon-background.css);
 @import url(../blocks/credit-card-number/__card-icon/credit-card-number__card-icon.css);
 
-@import url(../blocks/delivery-method/delivery-method.css);
 @import url(../blocks/info-block/_gap-16/info-block_gap-16.css);
 @import url(../blocks/change-button/change-button.css);
 @import url(../blocks/delivery-method/__row/delivery-method__row.css);
@@ -88,8 +88,6 @@
 @import url(../blocks/delivery-method/__flex-column/delivery-method__flex-column.css);
 @import url(../blocks/delivery-method/__address-work-hours/delivery-method__address-work-hours.css);
 
-@import url(../blocks/payment-method/payment-method.css);
-@import url(../blocks/recipient/recipient.css);
 @import url(../blocks/info-block/_recipient/info-block_recipient.css);
 @import url(../blocks/recipient/__form/recipient__form.css);
 @import url(../blocks/recipient/__form-row/recipient__form-row.css);

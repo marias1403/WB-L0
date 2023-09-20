@@ -1,6 +1,7 @@
 .main__container {
   margin: 0 auto;
+  padding: 34px 24px;
+  box-sizing: border-box;
   max-width: 1400px;
   width: 100%;
-  padding: 34px 24px;
 }
