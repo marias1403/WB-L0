@@ -97,9 +97,9 @@
                 <h3 class="section__subtitle">Оплата картой</h3>
                 <button class="order-summary__edit-button button"></button>
               </div>
-              <div class="order-summary__card-wrapper">
-                <div class="order-summary__card-icon-background">
-                  <img class="order-summary__card-icon" src="<%=require('./images/mir.svg')%>" alt="Банковская карта Мир" />
+              <div class="credit-card-number">
+                <div class="credit-card-number__card-icon-background">
+                  <img class="credit-card-number__card-icon" src="<%=require('./images/mir.svg')%>" alt="Банковская карта Мир" />
                 </div>
                 <p class="section__subtext">1234 12•• •••• 1234</p>
               </div>
@@ -123,7 +123,7 @@
             </div>
           </div>
         </aside>
-        <section class="delivery-method info-block info-block_delivery-method">
+        <section class="delivery-method info-block info-block_gap-16">
           <div class="info-block__title-wrapper">
             <h2 class="section__title">Способ доставки</h2>
             <button class="change-button button">Изменить</button>
@@ -135,7 +135,7 @@
               <div class="delivery-method__address-work-hours">
                 <img class="delivery-method__rating-icon" src="<%=require('./images/rating_icon.svg')%>" alt="Рейтинг"/>
                 <span class="section__subtext">4.99</span>
-                <span class="section__subtext section__subtext_delivery-method">Ежедневно с 10 до 21 </span>
+                <span class="section__subtext section__subtext_padding-left-4">Ежедневно с 10 до 21 </span>
               </div>
             </div>
           </div>
@@ -171,6 +171,22 @@
           <div class="delivery-method__free-return-info">
             <img class="delivery-method__shipping-icon" src="<%=require('./images/free_shipping_icon.svg')%>" alt="Бесплатная доставка при отказе" />
             <span class="section__subtext">Обратная доставка товаров на склад при отказе — <span class="section__subtext section__subtext_green">бесплатно</span></span>
+          </div>
+        </section>
+        <section class="payment-method info-block info-block_gap-16">
+          <div class="info-block__title-wrapper">
+            <h2 class="section__title">Способ оплаты</h2>
+            <button class="change-button button">Изменить</button>
+          </div>
+          <div class="payment-method__content-wrapper">
+            <div class="credit-card-number">
+              <div class="credit-card-number__card-icon-background">
+                <img class="credit-card-number__card-icon" src="<%=require('./images/mir.svg')%>" alt="Банковская карта Мир" />
+              </div>
+              <span class="section__text">1234 56•• •••• 1234</span>
+              <span class="section__text section__subtext_padding-left-4">01/30</span>
+            </div>
+            <p class="section__subtext section__subtext_grey">Спишем оплату с карты при получении</p>
           </div>
         </section>
 <!--        <section class="section content__section">-->
