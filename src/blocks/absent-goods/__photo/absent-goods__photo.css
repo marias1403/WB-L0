@@ -1,0 +1,7 @@
+.absent-goods__photo {
+  width: 72px;
+  height: 96px;
+  object-fit: cover;
+  border-radius: 8px;
+  background: rgba(0, 0, 0, 0.05);
+}

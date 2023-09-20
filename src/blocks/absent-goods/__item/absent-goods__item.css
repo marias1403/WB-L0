@@ -1,0 +1,8 @@
+.absent-goods__item {
+  max-width: 765px;
+  min-width: 638px;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: space-between;
+}
