@@ -1,4 +1,5 @@
 .content__column {
+  margin-top: 12px;
   width: 100%;
   display: flex;
   flex-direction: column;
