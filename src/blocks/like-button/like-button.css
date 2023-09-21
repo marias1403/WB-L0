@@ -7,4 +7,9 @@
   background-repeat: no-repeat;
   background-position: center;
   background-size: 20px 20px;
+  cursor: pointer;
+}
+
+.like-button:hover {
+  background-image: url(../../images/like_icon_hover.svg);
 }

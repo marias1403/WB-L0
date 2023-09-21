@@ -24,6 +24,7 @@
 @import url(../blocks/section/__subtext/_cart-items-list/section__subtext_cart-items-list.css);
 @import url(../blocks/section/__subtext/_quantity-left/section__subtext_quantity-left.css);
 @import url(../blocks/section/__subtext/_hidden/section__subtext_hidden.css);
+@import url(../blocks/section/__subtext/_bold/section__subtext_bold.css);
 
 @import url(../blocks/content/content.css);
 @import url(../blocks/page/__content/page__content.css);
@@ -149,3 +150,9 @@
 @import url(../blocks/footer/footer.css);
 @import url(../blocks/page/__footer/page__footer.css);
 @import url(../blocks/footer/__copyright/footer__copyright.css);
+
+@import url(../blocks/info-tooltip/info-tooltip.css);
+@import url(../blocks/info-tooltip/__row/info-tooltip__row.css);
+@import url(../blocks/info-tooltip/_hidden/info-tooltip_hidden.css);
+@import url(../blocks/info-tooltip/_free-return/info-tooltip_free-return.css);
+@import url(../blocks/info-tooltip/_discount/info-tooltip_discount.css);

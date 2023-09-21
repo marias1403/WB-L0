@@ -13,3 +13,7 @@
   overflow: hidden;
   color: #000000;
 }
+
+.recipient__input::placeholder {
+  color: #9797AF;
+}
