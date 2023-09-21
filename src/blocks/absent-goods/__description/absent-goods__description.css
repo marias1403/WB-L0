@@ -1,8 +1,11 @@
 .absent-goods__description {
+  max-width: 309px;
   margin-top: 8px;
   display: flex;
   flex-direction: row;
   align-items: center;
   justify-content: flex-start;
-  gap: 18px;
+  column-gap: 18px;
+  row-gap: 4px;
+  flex-wrap: wrap;
 }

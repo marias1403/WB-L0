@@ -11,6 +11,7 @@
 @import url(../blocks/section/__subtitle/section__subtitle.css);
 @import url(../blocks/section/__subtitle/_semibold/section__subtitle_semibold.css);
 @import url(../blocks/section/__text/section__text.css);
+@import url(../blocks/section/__text/_absent-goods/section__text_absent-goods.css);
 @import url(../blocks/section/__subtext/section__subtext.css);
 @import url(../blocks/section/__subtext/_purple/section__subtext_purple.css);
 @import url(../blocks/section/__subtext/_green/section__subtext_green.css);
@@ -18,6 +19,7 @@
 @import url(../blocks/section/__subtext/_padding-left-4/section__subtext_padding-left-4.css);
 @import url(../blocks/section/__subtext/_grey/section__subtext_grey.css);
 @import url(../blocks/section/__subtext/_recipient/section__subtext_recipient.css);
+@import url(../blocks/section/__subtext/_margin-top-8/section__subtext_margin-top-8.css);
 
 @import url(../blocks/content/content.css);
 @import url(../blocks/page/__content/page__content.css);
@@ -67,6 +69,7 @@
 @import url(../blocks/absent-goods/__content-wrapper/absent-goods__content-wrapper.css);
 @import url(../blocks/absent-goods/__photo/absent-goods__photo.css);
 @import url(../blocks/absent-goods/__description/absent-goods__description.css);
+@import url(../blocks/absent-goods/__description/_hidden/absent-goods__description_hidden.css);
 @import url(../blocks/absent-goods/__button-wrapper/absent-goods__button-wrapper.css);
 
 @import url(../blocks/info-block/info-block.css);
@@ -74,6 +77,7 @@
 @import url(../blocks/order-summary/order-summary.css);
 @import url(../blocks/order-summary/__cost-details/order-summary__cost-details.css);
 @import url(../blocks/order-summary/__order-details/order-summary__order-details.css);
+@import url(../blocks/order-summary/__cost-detail-row/order-summary__cost-detail-row.css);
 @import url(../blocks/order-summary/__subtitle-wrapper/order-summary__subtitle-wrapper.css);
 @import url(../blocks/order-summary/__edit-button/order-summary__edit-button.css);
 @import url(../blocks/order-summary/__highlighted-info/order-summary__highlighted-info.css);
