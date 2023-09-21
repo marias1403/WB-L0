@@ -7,3 +7,15 @@
   justify-content: stretch;
   align-content: start;
 }
+
+@media screen and (max-width: 1200px) {
+  .content {
+    grid-template-columns: 1fr 350px;
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .content {
+    grid-template-columns: 1fr 303px;
+  }
+}
