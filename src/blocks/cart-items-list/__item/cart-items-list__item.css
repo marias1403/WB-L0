@@ -1,0 +1,9 @@
+.cart-items-list__item {
+  width: 100%;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: space-between;
+  column-gap: 17px;
+}

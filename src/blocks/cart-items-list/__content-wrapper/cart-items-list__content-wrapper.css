@@ -1,0 +1,9 @@
+.cart-items-list__content-wrapper {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: flex-start;
+  position: relative;
+  box-sizing: border-box;
+  padding-left: 22px;
+}

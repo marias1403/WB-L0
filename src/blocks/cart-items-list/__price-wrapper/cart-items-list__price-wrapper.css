@@ -1,0 +1,8 @@
+.cart-items-list__price-wrapper {
+  width: 110px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  justify-content: flex-start;
+  gap: 7px;
+}

@@ -1,9 +1,11 @@
 .header__container {
-  max-width: 1400px;
+  padding-inline: 24px 21px;
   margin: 0 auto;
+  max-width: 1400px;
   display: flex;
   flex-direction: row;
   align-items: center;
   justify-content: space-between;
   gap: 32px;
+  box-sizing: border-box;
 }

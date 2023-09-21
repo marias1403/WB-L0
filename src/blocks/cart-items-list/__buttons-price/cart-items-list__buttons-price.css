@@ -1,0 +1,7 @@
+.cart-items-list__buttons-price {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: flex-end;
+  gap: 16px;
+}

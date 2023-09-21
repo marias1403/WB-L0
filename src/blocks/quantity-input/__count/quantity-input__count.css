@@ -1,0 +1,19 @@
+.quantity-input__count {
+  padding: 0;
+  background-color: transparent;
+  border: none;
+  color: #000000;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 24px;
+  width: 44px;
+  height: 23px;
+  text-align: center;
+  appearance: textfield;
+}
+
+.quantity-input__count::-webkit-outer-spin-button,
+.quantity-input__count::-webkit-inner-spin-button {
+  appearance: none;
+  margin: 0;
+}
