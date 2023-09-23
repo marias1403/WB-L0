@@ -10,3 +10,10 @@
   justify-content: center;
   overflow: hidden;
 }
+
+@media screen and (max-width: 1023px) {
+  .quantity-input {
+    width: 80px;
+    height: 32px;
+  }
+}

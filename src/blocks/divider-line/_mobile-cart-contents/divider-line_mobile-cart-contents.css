@@ -1,0 +1,9 @@
+.divider-line_mobile-cart-contents {
+  display: none;
+}
+
+@media screen and (max-width: 1023px) {
+  .divider-line_mobile-cart-contents {
+    display: block;
+  }
+}

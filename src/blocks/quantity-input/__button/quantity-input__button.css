@@ -16,3 +16,9 @@
 .quantity-input__button:focus {
   outline: none;
 }
+
+@media screen and (max-width: 1023px) {
+  .quantity-input__button {
+
+  }
+}

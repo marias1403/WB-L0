@@ -4,4 +4,15 @@
   align-items: flex-end;
   justify-content: flex-start;
   row-gap: 8px;
+  position: relative;
+}
+
+@media screen and (max-width: 1023px) {
+  .cart-items-list__buttons {
+    width: 100%;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+    column-gap: 132px;
+  }
 }

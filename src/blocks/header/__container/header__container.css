@@ -9,3 +9,9 @@
   gap: 32px;
   box-sizing: border-box;
 }
+
+@media screen and (max-width: 1023px) {
+  .header__container {
+    padding-inline: 13px;
+  }
+}

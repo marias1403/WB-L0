@@ -8,3 +8,10 @@
   row-gap: 8px;
   box-sizing: border-box;
 }
+
+@media screen and (max-width: 1023px) {
+  .cart-items-list__text-wrapper {
+    row-gap: 0;
+    max-width: 288px;
+  }
+}

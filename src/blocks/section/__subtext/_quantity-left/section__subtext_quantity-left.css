@@ -2,3 +2,11 @@
   color: #F55123;
   align-self: flex-start;
 }
+
+@media screen and (max-width: 1023px) {
+  .section__subtext_quantity-left {
+    position: absolute;
+    top: 8px;
+    left: 96px;
+  }
+}

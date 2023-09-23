@@ -6,3 +6,9 @@
   justify-content: flex-start;
   gap: 7px;
 }
+
+@media screen and (max-width: 1023px) {
+  .cart-items-list__price-wrapper {
+    display: none;
+  }
+}

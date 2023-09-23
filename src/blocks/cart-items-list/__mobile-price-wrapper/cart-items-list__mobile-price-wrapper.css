@@ -1,0 +1,13 @@
+.cart-items-list__mobile-price-wrapper {
+  display: none;
+  flex-direction: row;
+  align-items: flex-end;
+  justify-content: flex-start;
+  column-gap: 5px;
+}
+
+@media screen and (max-width: 1023px) {
+  .cart-items-list__mobile-price-wrapper {
+    display: flex;
+  }
+}

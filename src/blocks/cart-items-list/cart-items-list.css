@@ -8,3 +8,9 @@
   justify-content: flex-start;
   gap: 32px;
 }
+
+@media screen and (max-width: 1023px) {
+  .cart-items-list {
+    gap: 16px;
+  }
+}

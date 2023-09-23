@@ -1,0 +1,12 @@
+.checkbox_position {
+  position: absolute;
+  left: 0;
+  top: 38px;
+}
+
+@media screen and (max-width: 1023px) {
+  .checkbox_position {
+    top: 4px;
+    left: 4px;
+  }
+}

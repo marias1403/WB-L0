@@ -10,7 +10,7 @@
   background-size: 28px 24px;
 }
 
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 1023px) {
   .burger-menu {
     width: 28px;
     height: 28px;

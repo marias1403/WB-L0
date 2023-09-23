@@ -17,3 +17,12 @@
   appearance: none;
   margin: 0;
 }
+
+@media screen and (max-width: 1023px) {
+  .quantity-input__count {
+    width: 28px;
+    height: 32px;
+    font-size: 14px;
+    line-height: 20px;
+  }
+}
