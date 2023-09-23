@@ -1,0 +1,10 @@
+.radio-button {
+  width: 20px;
+  height: 24px;
+  position: relative;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}

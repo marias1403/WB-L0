@@ -119,12 +119,18 @@
 @import url(../blocks/order-summary/__address-text-wrapper/order-summary__address-text-wrapper.css);
 @import url(../blocks/order-summary/__checkbox-wrapper/order-summary__checkbox-wrapper.css);
 @import url(../blocks/order-summary/__terms-of-use-container/order-summary__terms-of-use-container.css);
+@import url(../blocks/order-summary/__card-number/order-summary__card-number.css);
+
 @import url(../blocks/submit-button/submit-button.css);
 @import url(../blocks/submit-button/_order-summary/submit-button_order-summary.css);
+@import url(../blocks/submit-button/_payment-popup/submit-button_payment-popup.css);
+@import url(../blocks/submit-button/_delivery-popup/submit-button_delivery-popup.css);
 
-@import url(../blocks/credit-card-number/credit-card-number.css);
-@import url(../blocks/credit-card-number/__card-icon-background/credit-card-number__card-icon-background.css);
-@import url(../blocks/credit-card-number/__card-icon/credit-card-number__card-icon.css);
+@import url(../blocks/credit-card-icon/credit-card-icon.css);
+@import url(../blocks/credit-card-icon/__mir-img/credit-card-icon__mir-img.css);
+@import url(../blocks/credit-card-icon/__visa-img/credit-card-icon__visa-img.css);
+@import url(../blocks/credit-card-icon/__mastercard-img/credit-card-icon__mastercard-img.css);
+@import url(../blocks/credit-card-icon/__maestro-img/credit-card-icon__maestro-img.css);
 
 @import url(../blocks/info-block/_gap-16/info-block_gap-16.css);
 @import url(../blocks/change-button/change-button.css);
@@ -137,6 +143,7 @@
 @import url(../blocks/delivery-method/__goods-photo-img/delivery-method__goods-photo-img.css);
 @import url(../blocks/delivery-method/__flex-column/delivery-method__flex-column.css);
 @import url(../blocks/delivery-method/__address-work-hours/delivery-method__address-work-hours.css);
+@import url(../blocks/payment-method/__card-number/payment-method__card-number.css);
 
 @import url(../blocks/info-block/_recipient/info-block_recipient.css);
 @import url(../blocks/recipient/__form/recipient__form.css);
@@ -156,3 +163,23 @@
 @import url(../blocks/info-tooltip/_hidden/info-tooltip_hidden.css);
 @import url(../blocks/info-tooltip/_free-return/info-tooltip_free-return.css);
 @import url(../blocks/info-tooltip/_discount/info-tooltip_discount.css);
+
+@import url(../blocks/radio-button/radio-button.css);
+@import url(../blocks/radio-button/__input/radio-button__input.css);
+@import url(../blocks/radio-button/__span/radio-button__span.css);
+
+@import url(../blocks/popup/popup.css);
+@import url(../blocks/popup/_opened/popup_opened.css);
+@import url(../blocks/popup/__container/popup__container.css);
+@import url(../blocks/popup/__container/_delivery-method/popup__container_delivery-method.css);
+@import url(../blocks/popup/__close-button/popup__close-button.css);
+@import url(../blocks/popup/__title/popup__title.css);
+@import url(../blocks/popup/__form/popup__form.css);
+@import url(../blocks/popup/__form/_delivery/popup__form_delivery.css);
+@import url(../blocks/popup/__form-row/popup__form-row.css);
+@import url(../blocks/popup/__address-wrapper/popup__address-wrapper.css);
+@import url(../blocks/popup/__radio/popup__radio.css);
+@import url(../blocks/popup/__card/popup__card.css);
+@import url(../blocks/popup/__toggle-wrapper/popup__toggle-wrapper.css);
+@import url(../blocks/popup/__toggle-button/popup__toggle-button.css);
+@import url(../blocks/popup/__toggle-button/_active/popup__toggle-button_active.css);
