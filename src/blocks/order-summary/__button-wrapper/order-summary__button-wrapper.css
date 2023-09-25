@@ -1,0 +1,9 @@
+.order-summary__button-wrapper {
+  width: 100%;
+}
+
+@media screen and (max-width: 1023px) {
+  .order-summary__button-wrapper {
+    margin-top: 10px;
+  }
+}

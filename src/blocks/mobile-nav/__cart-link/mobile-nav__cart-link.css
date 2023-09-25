@@ -1,0 +1,9 @@
+.mobile-nav__cart-link {
+  position: relative;
+  width: 28px;
+  height: 28px;
+  background-image: url("../../../images/mobile_nav_cart.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 28px 28px;
+}

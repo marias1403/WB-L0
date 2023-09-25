@@ -1,3 +1,4 @@
 .cart-items-list__item-photo_absent {
   filter: grayscale(100%);
+  margin-left: 0;
 }

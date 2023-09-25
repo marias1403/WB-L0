@@ -1,0 +1,23 @@
+.item-size-badge {
+  display: none;
+}
+
+@media screen and (max-width: 1023px) {
+  .item-size-badge {
+    padding-inline: 3px;
+    display: flex;
+    min-width: 22px;
+    max-width: 72px;
+    width: fit-content;
+    height: 22px;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    border-radius: 6px;
+    background: #ffffff;
+    box-sizing: border-box;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+  }
+}

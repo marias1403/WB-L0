@@ -76,6 +76,7 @@
                 <li class="cart-items-list__item">
                   <div class="divider-line divider-line_mobile-cart-contents"></div>
                   <div class="cart-items-list__content-wrapper">
+                    <span class="item-size-badge item-size-badge_goods">56</span>
                     <div class="checkbox checkbox_position">
                       <input class="checkbox__input" type="checkbox" id="t-shirt">
                       <span class="checkbox__span"></span>
@@ -131,7 +132,7 @@
                     <img class="cart-items-list__item-photo" src="<%=require('./images/cardholder.jpg')%>" alt="Футболка UZcotton мужская" />
                     <div class="cart-items-list__text-wrapper">
                       <div class="cart-items-list__mobile-price-wrapper">
-                        <h3 class="cart-items-list__price">2 100 047<span class="cart-items-list__price cart-items-list__price_currency">сом</span></h3>
+                        <h3 class="cart-items-list__price cart-items-list__price_bigger-price">2 100 047<span class="cart-items-list__price cart-items-list__price_currency">сом</span></h3>
                         <span class="section__subtext section__subtext_cart-items-list">2 300 047 сом</span>
                       </div>
                       <div class="cart-items-list__text">
@@ -171,6 +172,11 @@
                 <li class="cart-items-list__item">
                   <div class="divider-line divider-line_mobile-cart-contents"></div>
                   <div class="cart-items-list__content-wrapper">
+                    <div class="item-size-badge item-size-badge_goods">
+                      <div>
+                        <p class="item-size-badge__text">56/54/52/50</p>
+                      </div>
+                    </div>
                     <div class="checkbox checkbox_position">
                       <input class="checkbox__input" type="checkbox" id="pencils">
                       <span class="checkbox__span"></span>
@@ -236,7 +242,7 @@
                       </div>
                     </div>
                   </div>
-                  <div class="cart-items-list__like-delete-buttons">
+                  <div class="cart-items-list__like-delete-buttons cart-items-list__like-delete-buttons_missing">
                     <button class="like-button"></button>
                     <button class="delete-button"></button>
                   </div>
@@ -252,7 +258,7 @@
                       </div>
                     </div>
                   </div>
-                  <div class="cart-items-list__like-delete-buttons">
+                  <div class="cart-items-list__like-delete-buttons cart-items-list__like-delete-buttons_missing">
                     <button class="like-button"></button>
                     <button class="delete-button"></button>
                   </div>
@@ -268,7 +274,7 @@
                       </div>
                     </div>
                   </div>
-                  <div class="cart-items-list__like-delete-buttons">
+                  <div class="cart-items-list__like-delete-buttons cart-items-list__like-delete-buttons_missing">
                     <button class="like-button"></button>
                     <button class="delete-button"></button>
                   </div>
@@ -417,7 +423,7 @@
             </section>
           </div>
         </div>
-        <aside class="order-summary info-block content__section section">
+        <aside class="order-summary info-block info-block_order-summary content__section section">
           <div class="order-summary__cost-details">
             <div class="info-block__title-wrapper">
               <h2 class="section__title section__title_cost-details">Итого</h2>
@@ -469,7 +475,7 @@
               <div class="order-summary__checkbox-wrapper">
                 <div class="checkbox">
                   <input type="checkbox" class="checkbox__input" id="immediate-payment">
-                  <span class="checkbox__span"></span>
+                  <span class="checkbox__span checkbox__span_order-summary"></span>
                 </div>
                 <label for="immediate-payment" class="section__subtext">Списать оплату сразу</label>
               </div>
@@ -491,6 +497,19 @@
       <p class="footer__copyright">&#169;&nbsp;2022&nbsp;&nbsp;ООО «Товары и точка»</p>
     </footer>
   </div>
+
+  <nav class="mobile-nav">
+    <ul class="mobile-nav__links">
+      <li class="mobile-nav__home-link"><a href="#"></a></li>
+      <li class="mobile-nav__catalog-link"><a href="#"></a></li>
+      <li class="mobile-nav__cart-link mobile-nav__cart-link_active">
+        <span class="item-count-badge item-count-badge_mobile-nav">3</span>
+        <a href="#"></a>
+      </li>
+      <li class="mobile-nav__favorites-link"><a href="#"></a></li>
+      <li class="mobile-nav__profile-link"><a href="#"></a></li>
+    </ul>
+  </nav>
 
   <div class="info-tooltip info-tooltip_hidden">
     <h3 class="section__subtext section__subtext_bold">OOO «МЕГАПРОФСТИЛЬ»</h3>

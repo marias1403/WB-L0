@@ -6,3 +6,9 @@
   justify-content: flex-start;
   gap: 3px;
 }
+
+@media screen and (max-width: 1023px) {
+  .order-summary__text-wrapper {
+    display: none;
+  }
+}

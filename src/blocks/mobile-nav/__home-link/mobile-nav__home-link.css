@@ -1,0 +1,8 @@
+.mobile-nav__home-link {
+  width: 28px;
+  height: 28px;
+  background-image: url("../../../images/mobile_nav_home.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 28px 28px;
+}

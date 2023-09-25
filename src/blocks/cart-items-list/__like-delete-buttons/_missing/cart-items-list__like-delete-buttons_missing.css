@@ -1,0 +1,5 @@
+@media screen and (max-width: 1023px) {
+  .cart-items-list__like-delete-buttons_missing {
+    align-self: flex-end;
+  }
+}
