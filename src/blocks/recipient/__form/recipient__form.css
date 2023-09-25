@@ -11,5 +11,6 @@
 @media screen and (max-width: 1023px) {
   .recipient__form {
     row-gap: 26px;
+    max-width: 500px;
   }
 }

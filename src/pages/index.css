@@ -175,6 +175,7 @@
 @import url(../blocks/recipient/__form-row/_row/recipient__form-row_second.css);
 @import url(../blocks/recipient/__input-wrapper/recipient__input-wrapper.css);
 @import url(../blocks/recipient/__input/recipient__input.css);
+@import url(../blocks/recipient/__input/_invalid/recipient__input_invalid.css);
 @import url(../blocks/recipient/__label/recipient__label.css);
 
 @import url(../blocks/footer/footer.css);
