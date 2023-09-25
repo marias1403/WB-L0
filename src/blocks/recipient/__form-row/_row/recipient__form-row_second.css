@@ -1,3 +1,9 @@
 .recipient__form-row_second {
   grid-template-columns: repeat(3, 1fr);
 }
+
+@media screen and (max-width: 1023px) {
+  .recipient__form-row_second {
+    grid-template-columns: 1fr;
+  }
+}

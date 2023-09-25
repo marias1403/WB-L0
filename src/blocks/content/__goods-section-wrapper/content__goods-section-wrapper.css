@@ -1,0 +1,10 @@
+.content__goods-section-wrapper {
+  padding-inline: 24px;
+  box-sizing: border-box;
+}
+
+@media screen and (max-width: 1023px) {
+  .content__goods-section-wrapper {
+    padding-inline: 16px;
+  }
+}

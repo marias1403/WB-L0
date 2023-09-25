@@ -29,6 +29,7 @@
 @import url(../blocks/page/__content/page__content.css);
 @import url(../blocks/content/__column/content__column.css);
 @import url(../blocks/content/__section-wrapper/content__section-wrapper.css);
+@import url(../blocks/content/__goods-section-wrapper/content__goods-section-wrapper.css);
 @import url(../blocks/content/__section/content__section.css);
 
 @import url(../blocks/header/header.css);
@@ -65,6 +66,7 @@
 @import url(../blocks/cart-items-list/__item/cart-items-list__item.css);
 @import url(../blocks/cart-items-list/__content-wrapper/cart-items-list__content-wrapper.css);
 @import url(../blocks/cart-items-list/__item-photo/cart-items-list__item-photo.css);
+@import url(../blocks/cart-items-list/__item-photo/_absent/cart-items-list__item-photo_absent.css);
 @import url(../blocks/cart-items-list/__text-wrapper/cart-items-list__text-wrapper.css);
 @import url(../blocks/cart-items-list/__text/cart-items-list__text.css);
 @import url(../blocks/cart-items-list/__description/cart-items-list__description.css);
@@ -82,6 +84,8 @@
 @import url(../blocks/cart-items-list/__price/_bigger-price/cart-items-list__price_bigger-price.css);
 @import url(../blocks/cart-items-list/__subtext/cart-items-list__subtext.css);
 @import url(../blocks/cart-items-list/__item-name/cart-items-list__item-name.css);
+@import url(../blocks/cart-items-list/__item-name/_grey/cart-items-list__item-name_grey.css);
+@import url(../blocks/cart-items-list/_missing-goods/cart-items-list_missing-goods.css);
 
 @import url(../blocks/checkbox/checkbox.css);
 @import url(../blocks/checkbox/__input/checkbox__input.css);
@@ -92,7 +96,6 @@
 @import url(../blocks/divider-line/divider-line.css);
 @import url(../blocks/divider-line/_cart-contents/divider-line_cart-contents.css);
 @import url(../blocks/divider-line/_mobile-cart-contents/divider-line_mobile-cart-contents.css);
-@import url(../blocks/divider-line/_absent-goods/divider-line_absent-goods.css);
 @import url(../blocks/quantity-input/quantity-input.css);
 @import url(../blocks/quantity-input/__count/quantity-input__count.css);
 @import url(../blocks/quantity-input/__button/quantity-input__button.css);
@@ -101,9 +104,8 @@
 
 @import url(../blocks/absent-goods/__list/absent-goods__list.css);
 @import url(../blocks/absent-goods/__title-wrapper/absent-goods__title-wrapper.css);
-@import url(../blocks/absent-goods/__item/absent-goods__item.css);
 @import url(../blocks/absent-goods/__content-wrapper/absent-goods__content-wrapper.css);
-@import url(../blocks/absent-goods/__button-wrapper/absent-goods__button-wrapper.css);
+@import url(../blocks/absent-goods/__text-wrapper/absent-goods__text-wrapper.css);
 
 @import url(../blocks/info-block/info-block.css);
 @import url(../blocks/info-block/__title-wrapper/info-block__title-wrapper.css);
@@ -135,7 +137,9 @@
 
 @import url(../blocks/info-block/_gap-16/info-block_gap-16.css);
 @import url(../blocks/change-button/change-button.css);
+@import url(../blocks/delivery-method/__content/delivery-method__content.css);
 @import url(../blocks/delivery-method/__row/delivery-method__row.css);
+@import url(../blocks/delivery-method/__row/_margin/delivery-method__row_margin.css);
 @import url(../blocks/delivery-method/__rating-icon/delivery-method__rating-icon.css);
 @import url(../blocks/delivery-method/__free-return-info/delivery-method__free-return-icon.css);
 @import url(../blocks/delivery-method/__shipping-icon/delivery-method__shipping-icon.css);

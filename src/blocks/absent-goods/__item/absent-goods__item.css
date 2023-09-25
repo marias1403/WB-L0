@@ -1,9 +1,0 @@
-.absent-goods__item {
-  width: 100%;
-  padding-right: 125px;
-  box-sizing: border-box;
-  display: flex;
-  flex-direction: row;
-  align-items: flex-start;
-  justify-content: space-between;
-}

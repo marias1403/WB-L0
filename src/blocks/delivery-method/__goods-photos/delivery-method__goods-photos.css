@@ -8,3 +8,9 @@
   justify-content: flex-start;
   gap: 8px;
 }
+
+@media screen and (max-width: 1023px) {
+  .delivery-method__goods-photos {
+    margin-top: 12px;
+  }
+}

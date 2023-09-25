@@ -9,5 +9,6 @@
 @media screen and (max-width: 1023px) {
   .cart-items-list__like-delete-buttons {
     gap: 24px;
+    align-self: flex-end;
   }
 }

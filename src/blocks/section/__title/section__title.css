@@ -8,3 +8,11 @@
   letter-spacing: -0.24px;
   text-align: left;
 }
+
+@media screen and (max-width: 1023px) {
+  .section__title {
+    font-size: 20px;
+    line-height: 28px;
+    letter-spacing: -0.2px;
+  }
+}
