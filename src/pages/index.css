@@ -153,6 +153,7 @@
 @import url(../blocks/submit-button/_order-summary/submit-button_order-summary.css);
 @import url(../blocks/submit-button/_payment-popup/submit-button_payment-popup.css);
 @import url(../blocks/submit-button/_delivery-popup/submit-button_delivery-popup.css);
+@import url(../blocks/submit-button/_disabled/submit-button_disabled.css);
 
 @import url(../blocks/credit-card-icon/credit-card-icon.css);
 @import url(../blocks/credit-card-icon/__mir-img/credit-card-icon__mir-img.css);

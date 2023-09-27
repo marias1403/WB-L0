@@ -3,21 +3,23 @@ import CartProductList from "../components/CartProductList";
 import FormValidator from "../components/FormValidator";
 import { data } from "../utils/cartProducts";
 import { validationConfig } from "../utils/validationConfig";
+import { emptyFieldErrorMessages } from "../utils/emptyFieldErrorMessages";
+import { invalidEmailErrorMessages } from "../utils/invalidEmailErrorMessages";
 import "./index.css";
 
 const formValidators = {};
 
-const enableValidation = (config) => {
+const enableValidation = (config, customEmptyErrorMessages, customErrorMessages) => {
   const formList = Array.from(document.querySelectorAll(config.formSelector));
   formList.forEach((formElement) => {
-    const validator = new FormValidator(config, formElement);
+    const validator = new FormValidator(config, formElement, customEmptyErrorMessages, customErrorMessages);
     const formName = formElement.getAttribute('name');
     formValidators[formName] = validator;
     validator.enableValidation();
   });
 };
 
-enableValidation(validationConfig);
+enableValidation(validationConfig, emptyFieldErrorMessages, invalidEmailErrorMessages);
 
 const dropdownButton1 = document.getElementById("dropdownButton1");
 const dropdownContent1 = document.getElementById("dropdownContent1");
