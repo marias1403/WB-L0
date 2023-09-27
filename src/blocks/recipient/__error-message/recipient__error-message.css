@@ -1,0 +1,12 @@
+.recipient__error-message {
+  display: none;
+  color: #F55123;
+  font-size: 12px;
+  font-style: normal;
+  line-height: 14px;
+  text-align: left;
+  font-weight: 400;
+  position: absolute;
+  top: 50px;
+  left: 0;
+}

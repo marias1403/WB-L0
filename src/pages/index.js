@@ -1,7 +1,23 @@
 import CartProduct from "../components/CartProduct";
 import CartProductList from "../components/CartProductList";
+import FormValidator from "../components/FormValidator";
 import { data } from "../utils/cartProducts";
+import { validationConfig } from "../utils/validationConfig";
 import "./index.css";
+
+const formValidators = {};
+
+const enableValidation = (config) => {
+  const formList = Array.from(document.querySelectorAll(config.formSelector));
+  formList.forEach((formElement) => {
+    const validator = new FormValidator(config, formElement);
+    const formName = formElement.getAttribute('name');
+    formValidators[formName] = validator;
+    validator.enableValidation();
+  });
+};
+
+enableValidation(validationConfig);
 
 const dropdownButton1 = document.getElementById("dropdownButton1");
 const dropdownContent1 = document.getElementById("dropdownContent1");
