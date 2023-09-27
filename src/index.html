@@ -62,164 +62,18 @@
             <section class="cart-contents section content__section">
               <h1 class="section__main-title">Корзина</h1>
               <div class="cart-contents__wrapper">
-                <div class="cart-contents__select-all-checkbox-wrapper">
+                <h2 class="section__subtitle section__subtitle_semibold cart-contents__title" id="dropdownTitle1">266 товаров &#183; 2 100 569 сом</h2>
+                <div class="cart-contents__select-all-checkbox-wrapper" id="selectAllCheckbox">
                   <div class="checkbox">
                     <input type="checkbox" class="checkbox__input" id="selectAllGoods">
                     <span class="checkbox__span"></span>
                   </div>
                   <label class="section__text" for="selectAllGoods">Выбрать все</label>
                 </div>
-                <button class="dropdown__button button"></button>
+                <button class="dropdown__button button" id="dropdownButton1"></button>
               </div>
               <div class="divider-line divider-line_cart-contents"></div>
-              <ul class="cart-items-list cart-contents__list">
-                <li class="cart-items-list__item">
-                  <div class="divider-line divider-line_mobile-cart-contents"></div>
-                  <div class="cart-items-list__content-wrapper">
-                    <span class="item-size-badge item-size-badge_goods">56</span>
-                    <div class="checkbox checkbox_position">
-                      <input class="checkbox__input" type="checkbox" id="t-shirt">
-                      <span class="checkbox__span"></span>
-                    </div>
-                    <img class="cart-items-list__item-photo" src="<%=require('./images/tshirt_UZcotton.png')%>" alt="Футболка UZcotton мужская" />
-                    <div class="cart-items-list__text-wrapper">
-                      <div class="cart-items-list__mobile-price-wrapper">
-                        <h3 class="cart-items-list__price">522<span class="cart-items-list__price cart-items-list__price_currency">сом</span></h3>
-                        <span class="section__subtext section__subtext_cart-items-list">1051 сом</span>
-                      </div>
-                      <div class="cart-items-list__text">
-                        <label class="cart-items-list__item-name" for="t-shirt">Футболка UZcotton мужская</label>
-                        <div class="cart-items-list__description">
-                          <span class="section__subtext">Цвет: белый</span>
-                          <span class="section__subtext cart-items-list__subtext">Размер: 56</span>
-                        </div>
-                        <div class="cart-items-list__warehouse">
-                          <span class="section__subtext section__subtext_grey">Коледино WB</span>
-                          <div class="cart-items-list__icon-span-wrapper">
-                            <span class="section__subtext section__subtext_grey cart-items-list__subtext">OOO Вайлдберриз</span>
-                            <img class="cart-items-list__info-icon" src="<%=require('./images/info_icon.svg')%>" alt="Иконка Информация" />
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="cart-items-list__buttons-price">
-                    <div class="cart-items-list__buttons">
-                      <div class="quantity-input">
-                        <button class="quantity-input__button" data-action="minus" type="button">–</button>
-                        <input class="quantity-input__count" type="number" name="product-qty" min="0" max="999" value="1" disabled>
-                        <button class="quantity-input__button" data-action="add" type="button">+</button>
-                      </div>
-                      <span class="section__subtext section__subtext_quantity-left">Осталось 2 шт.</span>
-                      <div class="cart-items-list__like-delete-buttons">
-                        <button class="like-button"></button>
-                        <button class="delete-button"></button>
-                      </div>
-                    </div>
-                    <div class="cart-items-list__price-wrapper">
-                      <h3 class="cart-items-list__price">522<span class="cart-items-list__price cart-items-list__price_currency">сом</span></h3>
-                      <span class="section__subtext section__subtext_cart-items-list">1051 сом</span>
-                    </div>
-                  </div>
-                </li>
-                <li class="cart-items-list__item">
-                  <div class="divider-line divider-line_mobile-cart-contents"></div>
-                  <div class="cart-items-list__content-wrapper">
-                    <div class="checkbox checkbox_position">
-                      <input class="checkbox__input" type="checkbox" id="cardholder">
-                      <span class="checkbox__span"></span>
-                    </div>
-                    <img class="cart-items-list__item-photo" src="<%=require('./images/cardholder.jpg')%>" alt="Футболка UZcotton мужская" />
-                    <div class="cart-items-list__text-wrapper">
-                      <div class="cart-items-list__mobile-price-wrapper">
-                        <h3 class="cart-items-list__price cart-items-list__price_bigger-price">2 100 047<span class="cart-items-list__price cart-items-list__price_currency">сом</span></h3>
-                        <span class="section__subtext section__subtext_cart-items-list">2 300 047 сом</span>
-                      </div>
-                      <div class="cart-items-list__text">
-                        <label class="cart-items-list__item-name" for="cardholder">Силиконовый чехол картхолдер (отверстия) для карт, прозрачный кейс бампер на Apple iPhone XR, MobiSafe</label>
-                        <div class="cart-items-list__description">
-                          <span class="section__subtext">Цвет: прозрачный</span>
-                        </div>
-                        <div class="cart-items-list__warehouse">
-                          <span class="section__subtext section__subtext_grey">Коледино WB</span>
-                          <div class="cart-items-list__icon-span-wrapper">
-                            <span class="section__subtext section__subtext_grey cart-items-list__subtext">OOO Мегапрофстиль</span>
-                            <img class="cart-items-list__info-icon" src="<%=require('./images/info_icon.svg')%>" alt="Иконка Информация" />
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="cart-items-list__buttons-price">
-                    <div class="cart-items-list__buttons">
-                      <div class="quantity-input">
-                        <button class="quantity-input__button" data-action="minus" type="button">–</button>
-                        <input class="quantity-input__count" type="number" name="product-qty" min="0" max="999" value="1" disabled>
-                        <button class="quantity-input__button" data-action="add" type="button">+</button>
-                      </div>
-                      <span class="section__subtext section__subtext_quantity-left section__subtext_hidden">Осталось 2 шт.</span>
-                      <div class="cart-items-list__like-delete-buttons">
-                        <button class="like-button"></button>
-                        <button class="delete-button"></button>
-                      </div>
-                    </div>
-                    <div class="cart-items-list__price-wrapper">
-                      <h3 class="cart-items-list__price cart-items-list__price_bigger-price">2 100 047<span class="cart-items-list__price cart-items-list__price_currency">сом</span></h3>
-                      <span class="section__subtext section__subtext_cart-items-list">2 100 047 сом</span>
-                    </div>
-                  </div>
-                </li>
-                <li class="cart-items-list__item">
-                  <div class="divider-line divider-line_mobile-cart-contents"></div>
-                  <div class="cart-items-list__content-wrapper">
-                    <div class="item-size-badge item-size-badge_goods">
-                      <p class="item-size-badge__text">56/54/52/50</p>
-                    </div>
-                    <div class="checkbox checkbox_position">
-                      <input class="checkbox__input" type="checkbox" id="pencils">
-                      <span class="checkbox__span"></span>
-                    </div>
-                    <img class="cart-items-list__item-photo" src="<%=require('./images/faber_castell.jpg')%>" alt="Футболка UZcotton мужская" />
-                    <div class="cart-items-list__text-wrapper">
-                      <div class="cart-items-list__mobile-price-wrapper">
-                        <h3 class="cart-items-list__price">522<span class="cart-items-list__price cart-items-list__price_currency">сом</span></h3>
-                        <span class="section__subtext section__subtext_cart-items-list">1051 сом</span>
-                      </div>
-                      <div class="cart-items-list__text">
-                        <label class="cart-items-list__item-name" for="pencils">Карандаши цветные Faber-Castell "Замок", набор 24 цвета, заточенные, шестигранные, Faber-Castell</label>
-                        <div class="cart-items-list__description cart-items-list__description_hidden">
-                          <span class="section__subtext"></span>
-                        </div>
-                        <div class="cart-items-list__warehouse">
-                          <span class="section__subtext section__subtext_grey">Коледино WB</span>
-                          <div class="cart-items-list__icon-span-wrapper">
-                            <span class="section__subtext section__subtext_grey cart-items-list__subtext">OOO Вайлдберриз</span>
-                            <img class="cart-items-list__info-icon" src="<%=require('./images/info_icon.svg')%>" alt="Иконка Информация" />
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="cart-items-list__buttons-price">
-                    <div class="cart-items-list__buttons">
-                      <div class="quantity-input">
-                        <button class="quantity-input__button" data-action="minus" type="button">–</button>
-                        <input class="quantity-input__count" type="number" name="product-qty" min="0" max="999" value="1" disabled>
-                        <button class="quantity-input__button" data-action="add" type="button">+</button>
-                      </div>
-                      <span class="section__subtext section__subtext_quantity-left">Осталось 2 шт.</span>
-                      <div class="cart-items-list__like-delete-buttons">
-                        <button class="like-button"></button>
-                        <button class="delete-button"></button>
-                      </div>
-                    </div>
-                    <div class="cart-items-list__price-wrapper">
-                      <h3 class="cart-items-list__price">494<span class="cart-items-list__price cart-items-list__price_currency">сом</span></h3>
-                      <span class="section__subtext section__subtext_cart-items-list">950 сом</span>
-                    </div>
-                  </div>
-                </li>
-              </ul>
+              <ul class="cart-items-list cart-contents__list" id="dropdownContent1"></ul>
             </section>
             <section class="absent-goods content__section section">
               <div class="absent-goods__title-wrapper">
@@ -227,57 +81,57 @@
                 <button class="dropdown__button button"></button>
               </div>
               <div class="divider-line divider-line_cart-contents"></div>
-              <ul class="cart-items-list absent-goods__list cart-items-list_missing-goods">
-                <li class="cart-items-list__item">
-                  <div class="divider-line divider-line_mobile-cart-contents"></div>
-                  <div class="absent-goods__content-wrapper">
-                    <img class="cart-items-list__item-photo cart-items-list__item-photo_absent" src="<%=require('./images/tshirt_UZcotton.png')%>" alt="Футболка UZcotton мужская" />
-                    <div class="absent-goods__text-wrapper">
-                      <h3 class="cart-items-list__item-name cart-items-list__item-name_grey">Футболка UZcotton мужская</h3>
-                      <div class="cart-items-list__description">
-                        <span class="section__subtext section__subtext_grey">Цвет: белый</span>
-                        <span class="section__subtext cart-items-list__subtext section__subtext_grey">Размер: 56</span>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="cart-items-list__like-delete-buttons cart-items-list__like-delete-buttons_missing">
-                    <button class="like-button"></button>
-                    <button class="delete-button"></button>
-                  </div>
-                </li>
-                <li class="cart-items-list__item">
-                  <div class="divider-line divider-line_mobile-cart-contents"></div>
-                  <div class="absent-goods__content-wrapper">
-                    <img class="cart-items-list__item-photo cart-items-list__item-photo_absent" src="<%=require('./images/cardholder.jpg')%>" alt="Футболка UZcotton мужская" />
-                    <div class="absent-goods__text-wrapper">
-                      <h3 class="cart-items-list__item-name cart-items-list__item-name_grey">Силиконовый чехол картхолдер (отверстия) для карт, прозрачный кейс бампер на Apple iPhone XR, MobiSafe</h3>
-                      <div class="cart-items-list__description">
-                        <span class="section__subtext section__subtext_grey">Цвет: прозрачный</span>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="cart-items-list__like-delete-buttons cart-items-list__like-delete-buttons_missing">
-                    <button class="like-button"></button>
-                    <button class="delete-button"></button>
-                  </div>
-                </li>
-                <li class="cart-items-list__item">
-                  <div class="divider-line divider-line_mobile-cart-contents"></div>
-                  <div class="absent-goods__content-wrapper">
-                    <img class="cart-items-list__item-photo cart-items-list__item-photo_absent" src="<%=require('./images/faber_castell.jpg')%>" alt="Футболка UZcotton мужская" />
-                    <div class="absent-goods__text-wrapper">
-                      <h3 class="cart-items-list__item-name cart-items-list__item-name_grey">Карандаши цветные Faber-Castell "Замок", набор 24 цвета, заточенные, шестигранные, Faber-Castell</h3>
-                      <div class="cart-items-list__description">
-                        <span class="section__subtext section__subtext_grey">Цвет: прозрачный</span>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="cart-items-list__like-delete-buttons cart-items-list__like-delete-buttons_missing">
-                    <button class="like-button"></button>
-                    <button class="delete-button"></button>
-                  </div>
-                </li>
-              </ul>
+<!--              <ul class="cart-items-list absent-goods__list cart-items-list_missing-goods">-->
+<!--                <li class="cart-items-list__item">-->
+<!--                  <div class="divider-line divider-line_mobile-cart-contents"></div>-->
+<!--                  <div class="absent-goods__content-wrapper">-->
+<!--                    <img class="cart-items-list__item-photo cart-items-list__item-photo_absent" src="<%=require('./images/tshirt_UZcotton.png')%>" alt="Футболка UZcotton мужская" />-->
+<!--                    <div class="absent-goods__text-wrapper">-->
+<!--                      <h3 class="cart-items-list__item-name cart-items-list__item-name_grey">Футболка UZcotton мужская</h3>-->
+<!--                      <div class="cart-items-list__description">-->
+<!--                        <span class="section__subtext section__subtext_grey">Цвет: белый</span>-->
+<!--                        <span class="section__subtext cart-items-list__subtext section__subtext_grey">Размер: 56</span>-->
+<!--                      </div>-->
+<!--                    </div>-->
+<!--                  </div>-->
+<!--                  <div class="cart-items-list__like-delete-buttons cart-items-list__like-delete-buttons_missing">-->
+<!--                    <button class="like-button"></button>-->
+<!--                    <button class="delete-button"></button>-->
+<!--                  </div>-->
+<!--                </li>-->
+<!--                <li class="cart-items-list__item">-->
+<!--                  <div class="divider-line divider-line_mobile-cart-contents"></div>-->
+<!--                  <div class="absent-goods__content-wrapper">-->
+<!--                    <img class="cart-items-list__item-photo cart-items-list__item-photo_absent" src="<%=require('./images/cardholder.jpg')%>" alt="Футболка UZcotton мужская" />-->
+<!--                    <div class="absent-goods__text-wrapper">-->
+<!--                      <h3 class="cart-items-list__item-name cart-items-list__item-name_grey">Силиконовый чехол картхолдер (отверстия) для карт, прозрачный кейс бампер на Apple iPhone XR, MobiSafe</h3>-->
+<!--                      <div class="cart-items-list__description">-->
+<!--                        <span class="section__subtext section__subtext_grey">Цвет: прозрачный</span>-->
+<!--                      </div>-->
+<!--                    </div>-->
+<!--                  </div>-->
+<!--                  <div class="cart-items-list__like-delete-buttons cart-items-list__like-delete-buttons_missing">-->
+<!--                    <button class="like-button"></button>-->
+<!--                    <button class="delete-button"></button>-->
+<!--                  </div>-->
+<!--                </li>-->
+<!--                <li class="cart-items-list__item">-->
+<!--                  <div class="divider-line divider-line_mobile-cart-contents"></div>-->
+<!--                  <div class="absent-goods__content-wrapper">-->
+<!--                    <img class="cart-items-list__item-photo cart-items-list__item-photo_absent" src="<%=require('./images/faber_castell.jpg')%>" alt="Футболка UZcotton мужская" />-->
+<!--                    <div class="absent-goods__text-wrapper">-->
+<!--                      <h3 class="cart-items-list__item-name cart-items-list__item-name_grey">Карандаши цветные Faber-Castell "Замок", набор 24 цвета, заточенные, шестигранные, Faber-Castell</h3>-->
+<!--                      <div class="cart-items-list__description">-->
+<!--                        <span class="section__subtext section__subtext_grey">Цвет: прозрачный</span>-->
+<!--                      </div>-->
+<!--                    </div>-->
+<!--                  </div>-->
+<!--                  <div class="cart-items-list__like-delete-buttons cart-items-list__like-delete-buttons_missing">-->
+<!--                    <button class="like-button"></button>-->
+<!--                    <button class="delete-button"></button>-->
+<!--                  </div>-->
+<!--                </li>-->
+<!--              </ul>-->
             </section>
           </div>
           <div class="content__section-wrapper">
@@ -632,5 +486,71 @@
       <button class="submit-button submit-button_delivery-popup button">Выбрать</button>
     </div>
   </div>
+
+  <template class="template">
+    <li class="cart-items-list__item">
+      <div class="divider-line divider-line_mobile-cart-contents"></div>
+      <div class="cart-items-list__content-wrapper">
+        <span class="item-size-badge item-size-badge_goods cart-items-list__size"></span>
+        <div class="checkbox checkbox_position">
+          <input class="checkbox__input cart-items-list__checkbox" type="checkbox" id="#">
+          <span class="checkbox__span"></span>
+        </div>
+        <img class="cart-items-list__item-photo" src="#" alt="#" />
+        <div class="cart-items-list__text-wrapper">
+          <div class="cart-items-list__mobile-price-wrapper">
+            <div class="cart-items-list__price-with-currency">
+              <h3 class="cart-items-list__price"></h3>
+              <span class="cart-items-list__currency">сом</span>
+            </div>
+            <div class="cart-items-list__old-price-with-currency">
+              <span class="section__subtext section__subtext_grey cart-items-list__old-price"></span>
+              <span class="section__subtext section__subtext_grey">сом</span>
+            </div>
+          </div>
+          <div class="cart-items-list__text">
+            <label class="cart-items-list__item-name" for="#">Футболка UZcotton мужская</label>
+            <div class="cart-items-list__description">
+              <span class="section__subtext cart-items-list__color-el">Цвет: <span class="section__subtext cart-items-list__color"></span></span>
+              <span class="section__subtext cart-items-list__subtext cart-items-list__size-el">Размер: <span class="section__subtext cart-items-list__subtext cart-items-list__size"></span></span>
+            </div>
+            <div class="cart-items-list__contractors">
+              <span class="section__subtext section__subtext_grey cart-items-list__warehouse"></span>
+              <div class="cart-items-list__icon-span-wrapper">
+                <span class="section__subtext section__subtext_grey cart-items-list__subtext cart-items-list__deliverer"></span>
+                <img class="cart-items-list__info-icon" src="<%=require('./images/info_icon.svg')%>" alt="Иконка Информация" />
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="cart-items-list__buttons-price">
+        <div class="cart-items-list__buttons">
+          <div class="cart-items-list__quantity-with-span">
+            <div class="quantity-input">
+              <button class="quantity-input__button" data-action="minus" type="button">–</button>
+              <input class="quantity-input__count" type="number" name="product-qty" min="0" max="999" disabled>
+              <button class="quantity-input__button" data-action="add" type="button">+</button>
+            </div>
+            <span class="section__subtext section__subtext_quantity-left cart-items-list__remaining-el">Осталось <span class="section__subtext section__subtext_quantity-left cart-items-list__remaining"></span> шт.</span>
+          </div>
+          <div class="cart-items-list__like-delete-buttons">
+            <button class="like-button cart-items-list__like-button"></button>
+            <button class="delete-button cart-items-list__delete-button"></button>
+          </div>
+        </div>
+        <div class="cart-items-list__price-wrapper">
+          <div class="cart-items-list__price-with-currency">
+            <h3 class="cart-items-list__price"></h3>
+            <span class="cart-items-list__currency">сом</span>
+          </div>
+          <div class="cart-items-list__old-price-with-currency">
+            <span class="section__subtext section__subtext_grey cart-items-list__old-price"></span>
+            <span class="section__subtext section__subtext_grey">сом</span>
+          </div>
+        </div>
+      </div>
+    </li>
+  </template>
 </body>
 </html>

@@ -1,0 +1,7 @@
+.cart-items-list__price-with-currency {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-end;
+  justify-content: flex-end;
+  column-gap: 6px;
+}

@@ -20,7 +20,6 @@
 @import url(../blocks/section/__subtext/_grey/section__subtext_grey.css);
 @import url(../blocks/section/__subtext/_recipient/section__subtext_recipient.css);
 @import url(../blocks/section/__subtext/_margin-top-8/section__subtext_margin-top-8.css);
-@import url(../blocks/section/__subtext/_cart-items-list/section__subtext_cart-items-list.css);
 @import url(../blocks/section/__subtext/_quantity-left/section__subtext_quantity-left.css);
 @import url(../blocks/section/__subtext/_hidden/section__subtext_hidden.css);
 @import url(../blocks/section/__subtext/_bold/section__subtext_bold.css);
@@ -75,6 +74,9 @@
 
 @import url(../blocks/cart-contents/__wrapper/cart-contents__wrapper.css);
 @import url(../blocks/cart-contents/__select-all-checkbox-wrapper/cart-contents__select-all-checkbox-wrapper.css);
+@import url(../blocks/cart-contents/__title/cart-contents__title.css);
+@import url(../blocks/cart-contents/__title/_block/cart-contents__title_block.css);
+
 @import url(../blocks/cart-items-list/cart-items-list.css);
 @import url(../blocks/cart-contents/__list/cart-contents__list.css);
 @import url(../blocks/cart-items-list/__item/cart-items-list__item.css);
@@ -85,7 +87,7 @@
 @import url(../blocks/cart-items-list/__text/cart-items-list__text.css);
 @import url(../blocks/cart-items-list/__description/cart-items-list__description.css);
 @import url(../blocks/cart-items-list/__description/_hidden/cart-items-list__description_hidden.css);
-@import url(../blocks/cart-items-list/__warehouse/cart-items-list__warehouse.css);
+@import url(../blocks/cart-items-list/__contractors/cart-items-list__contractors.css);
 @import url(../blocks/cart-items-list/__icon-span-wrapper/cart-items-list__icon-span-wrapper.css);
 @import url(../blocks/cart-items-list/__info-icon/cart-items-list__info-icon.css);
 @import url(../blocks/cart-items-list/__buttons-price/cart-items-list__buttons-price.css);
@@ -94,13 +96,16 @@
 @import url(../blocks/cart-items-list/__like-delete-buttons/_missing/cart-items-list__like-delete-buttons_missing.css);
 @import url(../blocks/cart-items-list/__price-wrapper/cart-items-list__price-wrapper.css);
 @import url(../blocks/cart-items-list/__mobile-price-wrapper/cart-items-list__mobile-price-wrapper.css);
+@import url(../blocks/cart-items-list/__price-with-currency/cart-items-list__price-with-currency.css);
 @import url(../blocks/cart-items-list/__price/cart-items-list__price.css);
-@import url(../blocks/cart-items-list/__price/_currency/cart-items-list__price_currency.css);
+@import url(../blocks/cart-items-list/__currency/cart-items-list__currency.css);
 @import url(../blocks/cart-items-list/__price/_bigger-price/cart-items-list__price_bigger-price.css);
 @import url(../blocks/cart-items-list/__subtext/cart-items-list__subtext.css);
 @import url(../blocks/cart-items-list/__item-name/cart-items-list__item-name.css);
 @import url(../blocks/cart-items-list/__item-name/_grey/cart-items-list__item-name_grey.css);
 @import url(../blocks/cart-items-list/_missing-goods/cart-items-list_missing-goods.css);
+@import url(../blocks/cart-items-list/__old-price-with-currency/cart-items-list__old-price-with-currency.css);
+@import url(../blocks/cart-items-list/__quantity-with-span/cart-items-list__quantity-with-span.css);
 
 @import url(../blocks/checkbox/checkbox.css);
 @import url(../blocks/checkbox/__input/checkbox__input.css);
@@ -109,6 +114,7 @@
 @import url(../blocks/checkbox/_position/checkbox_position.css);
 
 @import url(../blocks/dropdown/__button/dropdown__button.css);
+@import url(../blocks/dropdown/__button/_closed/dropdown__button_closed.css);
 @import url(../blocks/divider-line/divider-line.css);
 @import url(../blocks/divider-line/_cart-contents/divider-line_cart-contents.css);
 @import url(../blocks/divider-line/_mobile-cart-contents/divider-line_mobile-cart-contents.css);
@@ -116,6 +122,7 @@
 @import url(../blocks/quantity-input/__count/quantity-input__count.css);
 @import url(../blocks/quantity-input/__button/quantity-input__button.css);
 @import url(../blocks/like-button/like-button.css);
+@import url(../blocks/like-button/_active/like-button_active.css);
 @import url(../blocks/delete-button/delete-button.css);
 
 @import url(../blocks/absent-goods/__list/absent-goods__list.css);
