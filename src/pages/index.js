@@ -2,11 +2,14 @@ import ProductListItem from "../components/ProductListItem";
 import ProductList from "../components/ProductList";
 import CartProductListItem from "../components/CartProductListItem";
 import FormValidator from "../components/FormValidator";
+import DeliveryPopup from "../components/DeliveryPopup";
+import PaymentPopup from "../components/PaymentPopup";
 import { cartProductsData } from "../utils/cartProductsData";
 import { missingProductData } from "../utils/missingProductsData";
 import { validationConfig } from "../utils/validationConfig";
 import { emptyFieldErrorMessages } from "../utils/emptyFieldErrorMessages";
 import { invalidEmailErrorMessages } from "../utils/invalidEmailErrorMessages";
+import { editPaymentButton, editDeliveryButton } from "../utils/constants";
 import "./index.css";
 
 const formValidators = {};
@@ -41,6 +44,17 @@ function toggleDropdown1() {
   }
 }
 dropdownButton1.addEventListener("click", toggleDropdown1);
+
+const paymentPopup = new PaymentPopup(".popup_type_payment-method");
+paymentPopup.setEventListeners();
+const deliveryPopup = new DeliveryPopup(".popup_type_delivery-method");
+deliveryPopup.setEventListeners();
+editPaymentButton.addEventListener("click", () => {
+  paymentPopup.open();
+});
+editDeliveryButton.addEventListener("click", () => {
+  deliveryPopup.open();
+});
 
 function handleToggleLike(productElement) {
   productElement.handleToggleLike();
