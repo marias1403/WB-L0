@@ -9,7 +9,17 @@ import { missingProductData } from "../utils/missingProductsData";
 import { validationConfig } from "../utils/validationConfig";
 import { emptyFieldErrorMessages } from "../utils/emptyFieldErrorMessages";
 import { invalidEmailErrorMessages } from "../utils/invalidEmailErrorMessages";
-import { editPaymentButton, editDeliveryButton } from "../utils/constants";
+import {
+  editPaymentButton,
+  editDeliveryButton,
+  dropdownButton1,
+  dropdownContent1,
+  selectAllCheckbox,
+  dropdownTitle1,
+  dropdownButton2,
+  dropdownContent2,
+  dividerLine2
+} from "../utils/constants";
 import "./index.css";
 
 const formValidators = {};
@@ -26,10 +36,6 @@ const enableValidation = (config, customEmptyErrorMessages, customErrorMessages)
 
 enableValidation(validationConfig, emptyFieldErrorMessages, invalidEmailErrorMessages);
 
-const dropdownButton1 = document.getElementById("dropdownButton1");
-const dropdownContent1 = document.getElementById("dropdownContent1");
-const selectAllCheckbox = document.getElementById("selectAllCheckbox");
-const dropdownTitle1 = document.getElementById("dropdownTitle1");
 function toggleDropdown1() {
   if (dropdownContent1.style.display === "flex") {
     dropdownContent1.style.display = "none";
@@ -44,6 +50,19 @@ function toggleDropdown1() {
   }
 }
 dropdownButton1.addEventListener("click", toggleDropdown1);
+
+function toggleDropdown2() {
+  if (dropdownContent2.style.display === "flex") {
+    dropdownContent2.style.display = "none";
+    dividerLine2.style.display = "none";
+    dropdownButton2.classList.add("dropdown__button_closed");
+  } else {
+    dropdownContent2.style.display = "flex";
+    dividerLine2.style.display = "block";
+    dropdownButton2.classList.remove("dropdown__button_closed");
+  }
+}
+dropdownButton2.addEventListener("click", toggleDropdown2);
 
 const paymentPopup = new PaymentPopup(".popup_type_payment-method");
 paymentPopup.setEventListeners();

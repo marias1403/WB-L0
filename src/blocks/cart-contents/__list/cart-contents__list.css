@@ -1,9 +1,11 @@
 .cart-contents__list {
   margin-top: 11px;
+  margin-bottom: 19px;
 }
 
 @media screen and (max-width: 1023px) {
   .cart-contents__list {
     margin-top: 17px;
+    margin-bottom: 28px;
   }
 }

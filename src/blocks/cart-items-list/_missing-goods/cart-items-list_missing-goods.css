@@ -1,10 +1,13 @@
 .cart-items-list_missing-goods {
   margin-top: 11px;
+  margin-right: 125px;
+  box-sizing: border-box;
 }
 
 @media screen and (max-width: 1023px) {
   .cart-items-list_missing-goods {
     margin-top: 19px;
+    margin-right: 0;
     gap: 20px;
   }
 }
