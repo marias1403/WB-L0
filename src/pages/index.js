@@ -1,3 +1,4 @@
+import "./index.css";
 import ProductListItem from "../components/ProductListItem";
 import ProductList from "../components/ProductList";
 import CartProductListItem from "../components/CartProductListItem";
@@ -20,9 +21,10 @@ import {
   dropdownTitle1,
   btnDropdown2,
   dropdownContent2,
-  dividerLine2
+  dividerLine2,
+  textsTooltipFreeReturn,
+  freeReturnTooltipTemplate
 } from "../utils/constants";
-import "./index.css";
 
 const formValidators = {};
 
@@ -81,6 +83,27 @@ btnEditDeliveryText.addEventListener("click", () => {
 });
 btnEditDeliveryIcon.addEventListener("click", () => {
   deliveryPopup.open();
+});
+
+textsTooltipFreeReturn.forEach(text => {
+  text.addEventListener("mouseover", (e) => {
+    const tooltip = freeReturnTooltipTemplate.content.firstElementChild.cloneNode(true);
+    const parentNode = e.target;
+    parentNode.appendChild(tooltip);
+    parentNode.style.position = 'relative';
+    tooltip.style.top = parentNode.offsetHeight + 'px';
+    tooltip.style.left = (- (tooltip.offsetWidth - parentNode.offsetWidth) / 2) + 'px';
+  });
+
+  text.addEventListener("mouseout", (e) => {
+    const tooltip = document.querySelector(".info-tooltip_free-return");
+    tooltip.style.display = "none";
+    const parentNode = e.target;
+    if (tooltip) {
+      tooltip.style.display = "none";
+      parentNode.removeChild(tooltip);
+    }
+  });
 });
 
 function handleToggleLike(productElement) {

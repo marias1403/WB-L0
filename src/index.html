@@ -133,7 +133,7 @@
                 </div>
                 <div class="delivery-method__free-return-info">
                   <img class="delivery-method__shipping-icon" src="<%=require('./images/free_shipping_icon.svg')%>" alt="Бесплатная доставка при отказе" />
-                  <span class="section__subtext">Обратная доставка товаров на склад при отказе — <span class="section__subtext section__subtext_green">бесплатно</span></span>
+                  <span class="section__subtext">Обратная доставка товаров на склад при отказе — <span class="section__subtext section__subtext_green free-return-info">бесплатно</span></span>
                 </div>
               </div>
             </section>
@@ -262,7 +262,7 @@
             <div class="order-summary__highlighted-info">
               <div class="order-summary__shipping-info">
                 <img class="order-summary__shipping-icon" src="<%=require('./images/free_shipping_icon.svg')%>" alt="Бесплатная доставка при отказе"/>
-                <p class="section__subtext">Обратная доставка товаров на склад при отказе — <span class="section__subtext section__subtext_green">бесплатно</span></p>
+                <p class="section__subtext">Обратная доставка товаров на склад при отказе — <span class="section__subtext section__subtext_green free-return-info">бесплатно</span></p>
               </div>
             </div>
           </div>
@@ -323,10 +323,6 @@
     <h3 class="section__subtext section__subtext_bold">OOO «МЕГАПРОФСТИЛЬ»</h3>
     <p class="section__subtext">ОГРН: 5167746237148</p>
     <p class="section__subtext">129337, Москва, улица Красная Сосна, 2, корпус 1, стр. 1, помещение 2, офис 34</p>
-  </div>
-
-  <div class="info-tooltip info-tooltip_free-return info-tooltip_hidden">
-    <p class="section__subtext">Если товары вам не подойдут, мы вернем их обратно на склад — это бесплатно</p>
   </div>
 
   <div class="info-tooltip info-tooltip_discount info-tooltip_hidden">
@@ -442,6 +438,12 @@
       <button class="submit-button submit-button_delivery-popup button">Выбрать</button>
     </div>
   </div>
+
+  <template class="template-tooltip-free-return">
+    <div class="info-tooltip info-tooltip_free-return">
+      <p class="section__subtext">Если товары вам не подойдут, мы вернем их обратно на склад — это бесплатно</p>
+    </div>
+  </template>
 
   <template class="template">
     <li class="cart-items-list__item">

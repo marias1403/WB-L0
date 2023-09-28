@@ -11,4 +11,5 @@
   align-items: flex-start;
   justify-content: flex-start;
   row-gap: 8px;
+  position: absolute;
 }

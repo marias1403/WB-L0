@@ -11,3 +11,6 @@ export const dropdownTitle1 = document.getElementById("dropdownTitle1");
 export const btnDropdown2 = document.getElementById("btnDropdown2");
 export const dropdownContent2 = document.getElementById("dropdownContent2");
 export const dividerLine2 = document.getElementById("dividerLine2");
+
+export const textsTooltipFreeReturn = document.querySelectorAll(".free-return-info");
+export const freeReturnTooltipTemplate = document.querySelector(".template-tooltip-free-return");
