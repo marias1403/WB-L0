@@ -1,9 +1,0 @@
-.absent-goods__list {
-  margin-top: 11px;
-}
-
-@media screen and (max-width: 1023px) {
-  .absent-goods__list {
-    margin-top: 19px;
-  }
-}

@@ -1,0 +1,12 @@
+.cart-items-list__text-wrapper_in-stock {
+  margin-left: 16px;
+  max-width: 250px;
+  box-sizing: border-box;
+}
+
+@media screen and (max-width: 1023px) {
+  .cart-items-list__text-wrapper_in-stock {
+    row-gap: 0;
+    width: 100%;
+  }
+}

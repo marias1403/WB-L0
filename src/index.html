@@ -81,7 +81,7 @@
                 <button class="dropdown__button button"></button>
               </div>
               <div class="divider-line divider-line_cart-contents"></div>
-              <ul class="cart-items-list absent-goods__list cart-items-list_missing-goods"></ul>
+              <ul class="cart-items-list cart-items-list_missing-goods"></ul>
             </section>
           </div>
           <div class="content__section-wrapper">
@@ -446,14 +446,14 @@
   <template class="template">
     <li class="cart-items-list__item">
       <div class="divider-line divider-line_mobile-cart-contents"></div>
-      <div class="cart-items-list__content-wrapper">
+      <div class="cart-items-list__content-wrapper cart-items-list__content-wrapper_in-stock">
         <span class="item-size-badge item-size-badge_goods cart-items-list__size"></span>
         <div class="checkbox checkbox_position">
           <input class="checkbox__input cart-items-list__checkbox" type="checkbox" id="#">
           <span class="checkbox__span"></span>
         </div>
         <img class="cart-items-list__item-photo" src="#" alt="#" />
-        <div class="cart-items-list__text-wrapper">
+        <div class="cart-items-list__text-wrapper cart-items-list__text-wrapper_in-stock">
           <div class="cart-items-list__mobile-price-wrapper">
             <div class="cart-items-list__price-with-currency">
               <h3 class="cart-items-list__price"></h3>
@@ -512,10 +512,10 @@
   <template class="template-missing-item">
     <li class="cart-items-list__item">
       <div class="divider-line divider-line_mobile-cart-contents"></div>
-      <div class="absent-goods__content-wrapper">
+      <div class="cart-items-list__content-wrapper">
         <span class="item-size-badge item-size-badge_goods cart-items-list__size"></span>
         <img class="cart-items-list__item-photo cart-items-list__item-photo_absent" src="#" alt="#" />
-        <div class="absent-goods__text-wrapper">
+        <div class="cart-items-list__text-wrapper">
           <h3 class="cart-items-list__item-name cart-items-list__item-name_grey">#</h3>
           <div class="cart-items-list__description">
             <span class="section__subtext section__subtext_grey cart-items-list__color-el">Цвет: <span class="section__subtext section__subtext_grey cart-items-list__color"></span></span>

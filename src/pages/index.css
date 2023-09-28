@@ -81,9 +81,11 @@
 @import url(../blocks/cart-contents/__list/cart-contents__list.css);
 @import url(../blocks/cart-items-list/__item/cart-items-list__item.css);
 @import url(../blocks/cart-items-list/__content-wrapper/cart-items-list__content-wrapper.css);
+@import url(../blocks/cart-items-list/__content-wrapper/_in-stock/cart-items-list__content-wrapper_in-stock.css);
 @import url(../blocks/cart-items-list/__item-photo/cart-items-list__item-photo.css);
 @import url(../blocks/cart-items-list/__item-photo/_absent/cart-items-list__item-photo_absent.css);
 @import url(../blocks/cart-items-list/__text-wrapper/cart-items-list__text-wrapper.css);
+@import url(../blocks/cart-items-list/__text-wrapper/_in-stock/cart-items-list__text-wrapper_in-stock.css);
 @import url(../blocks/cart-items-list/__text/cart-items-list__text.css);
 @import url(../blocks/cart-items-list/__description/cart-items-list__description.css);
 @import url(../blocks/cart-items-list/__description/_hidden/cart-items-list__description_hidden.css);
@@ -125,10 +127,7 @@
 @import url(../blocks/like-button/_active/like-button_active.css);
 @import url(../blocks/delete-button/delete-button.css);
 
-@import url(../blocks/absent-goods/__list/absent-goods__list.css);
 @import url(../blocks/absent-goods/__title-wrapper/absent-goods__title-wrapper.css);
-@import url(../blocks/absent-goods/__content-wrapper/absent-goods__content-wrapper.css);
-@import url(../blocks/absent-goods/__text-wrapper/absent-goods__text-wrapper.css);
 
 @import url(../blocks/info-block/info-block.css);
 @import url(../blocks/info-block/__title-wrapper/info-block__title-wrapper.css);

@@ -1,0 +1,12 @@
+.cart-items-list__content-wrapper_in-stock {
+  position: relative;
+  box-sizing: border-box;
+  padding-left: 22px;
+  gap: 0;
+}
+
+@media screen and (max-width: 1023px) {
+  .cart-items-list__content-wrapper_in-stock {
+    padding-left: 0;
+  }
+}

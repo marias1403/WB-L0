@@ -3,13 +3,5 @@
   flex-direction: row;
   align-items: flex-start;
   justify-content: flex-start;
-  position: relative;
-  box-sizing: border-box;
-  padding-left: 22px;
-}
-
-@media screen and (max-width: 1023px) {
-  .cart-items-list__content-wrapper {
-    padding-left: 0;
-  }
+  gap: 16px;
 }

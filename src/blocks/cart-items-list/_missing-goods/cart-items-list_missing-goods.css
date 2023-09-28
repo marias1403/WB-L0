@@ -1,5 +1,10 @@
+.cart-items-list_missing-goods {
+  margin-top: 11px;
+}
+
 @media screen and (max-width: 1023px) {
   .cart-items-list_missing-goods {
+    margin-top: 19px;
     gap: 20px;
   }
 }
