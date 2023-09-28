@@ -73,7 +73,7 @@ export default class FormValidator {
   _setEventListeners = () => {
     this._toggleButtonState();
     this._inputs.forEach((input) => {
-      input.addEventListener('input', () => {
+      input.addEventListener('blur', () => {
         if (input.id === 'recipientPhoneNumber') {
           this.formatPhoneNumber(input);
         } else {

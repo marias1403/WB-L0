@@ -81,57 +81,7 @@
                 <button class="dropdown__button button"></button>
               </div>
               <div class="divider-line divider-line_cart-contents"></div>
-<!--              <ul class="cart-items-list absent-goods__list cart-items-list_missing-goods">-->
-<!--                <li class="cart-items-list__item">-->
-<!--                  <div class="divider-line divider-line_mobile-cart-contents"></div>-->
-<!--                  <div class="absent-goods__content-wrapper">-->
-<!--                    <img class="cart-items-list__item-photo cart-items-list__item-photo_absent" src="<%=require('./images/tshirt_UZcotton.png')%>" alt="Футболка UZcotton мужская" />-->
-<!--                    <div class="absent-goods__text-wrapper">-->
-<!--                      <h3 class="cart-items-list__item-name cart-items-list__item-name_grey">Футболка UZcotton мужская</h3>-->
-<!--                      <div class="cart-items-list__description">-->
-<!--                        <span class="section__subtext section__subtext_grey">Цвет: белый</span>-->
-<!--                        <span class="section__subtext cart-items-list__subtext section__subtext_grey">Размер: 56</span>-->
-<!--                      </div>-->
-<!--                    </div>-->
-<!--                  </div>-->
-<!--                  <div class="cart-items-list__like-delete-buttons cart-items-list__like-delete-buttons_missing">-->
-<!--                    <button class="like-button"></button>-->
-<!--                    <button class="delete-button"></button>-->
-<!--                  </div>-->
-<!--                </li>-->
-<!--                <li class="cart-items-list__item">-->
-<!--                  <div class="divider-line divider-line_mobile-cart-contents"></div>-->
-<!--                  <div class="absent-goods__content-wrapper">-->
-<!--                    <img class="cart-items-list__item-photo cart-items-list__item-photo_absent" src="<%=require('./images/cardholder.jpg')%>" alt="Футболка UZcotton мужская" />-->
-<!--                    <div class="absent-goods__text-wrapper">-->
-<!--                      <h3 class="cart-items-list__item-name cart-items-list__item-name_grey">Силиконовый чехол картхолдер (отверстия) для карт, прозрачный кейс бампер на Apple iPhone XR, MobiSafe</h3>-->
-<!--                      <div class="cart-items-list__description">-->
-<!--                        <span class="section__subtext section__subtext_grey">Цвет: прозрачный</span>-->
-<!--                      </div>-->
-<!--                    </div>-->
-<!--                  </div>-->
-<!--                  <div class="cart-items-list__like-delete-buttons cart-items-list__like-delete-buttons_missing">-->
-<!--                    <button class="like-button"></button>-->
-<!--                    <button class="delete-button"></button>-->
-<!--                  </div>-->
-<!--                </li>-->
-<!--                <li class="cart-items-list__item">-->
-<!--                  <div class="divider-line divider-line_mobile-cart-contents"></div>-->
-<!--                  <div class="absent-goods__content-wrapper">-->
-<!--                    <img class="cart-items-list__item-photo cart-items-list__item-photo_absent" src="<%=require('./images/faber_castell.jpg')%>" alt="Футболка UZcotton мужская" />-->
-<!--                    <div class="absent-goods__text-wrapper">-->
-<!--                      <h3 class="cart-items-list__item-name cart-items-list__item-name_grey">Карандаши цветные Faber-Castell "Замок", набор 24 цвета, заточенные, шестигранные, Faber-Castell</h3>-->
-<!--                      <div class="cart-items-list__description">-->
-<!--                        <span class="section__subtext section__subtext_grey">Цвет: прозрачный</span>-->
-<!--                      </div>-->
-<!--                    </div>-->
-<!--                  </div>-->
-<!--                  <div class="cart-items-list__like-delete-buttons cart-items-list__like-delete-buttons_missing">-->
-<!--                    <button class="like-button"></button>-->
-<!--                    <button class="delete-button"></button>-->
-<!--                  </div>-->
-<!--                </li>-->
-<!--              </ul>-->
+              <ul class="cart-items-list absent-goods__list cart-items-list_missing-goods"></ul>
             </section>
           </div>
           <div class="content__section-wrapper">
@@ -555,6 +505,27 @@
             <span class="section__subtext section__subtext_grey">сом</span>
           </div>
         </div>
+      </div>
+    </li>
+  </template>
+
+  <template class="template-missing-item">
+    <li class="cart-items-list__item">
+      <div class="divider-line divider-line_mobile-cart-contents"></div>
+      <div class="absent-goods__content-wrapper">
+        <span class="item-size-badge item-size-badge_goods cart-items-list__size"></span>
+        <img class="cart-items-list__item-photo cart-items-list__item-photo_absent" src="#" alt="#" />
+        <div class="absent-goods__text-wrapper">
+          <h3 class="cart-items-list__item-name cart-items-list__item-name_grey">#</h3>
+          <div class="cart-items-list__description">
+            <span class="section__subtext section__subtext_grey cart-items-list__color-el">Цвет: <span class="section__subtext section__subtext_grey cart-items-list__color"></span></span>
+            <span class="section__subtext section__subtext_grey cart-items-list__subtext cart-items-list__size-el">Размер: <span class="section__subtext section__subtext_grey cart-items-list__subtext cart-items-list__size"></span></span>
+          </div>
+        </div>
+      </div>
+      <div class="cart-items-list__like-delete-buttons cart-items-list__like-delete-buttons_missing">
+        <button class="like-button cart-items-list__like-button"></button>
+        <button class="delete-button cart-items-list__delete-button"></button>
       </div>
     </li>
   </template>

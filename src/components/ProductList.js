@@ -1,4 +1,4 @@
-export default class CartProductList {
+export default class ProductList {
   constructor({ renderer }, containerSelector) {
     this._renderer = renderer;
     this._container = document.querySelector(containerSelector);

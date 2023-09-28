@@ -1,4 +1,4 @@
-export const data = [
+export const cartProductsData = [
   {
     "id": 1,
     "name": "Футболка UZcotton мужская",

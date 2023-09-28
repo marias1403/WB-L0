@@ -1,7 +1,9 @@
-import CartProduct from "../components/CartProduct";
-import CartProductList from "../components/CartProductList";
+import ProductListItem from "../components/ProductListItem";
+import ProductList from "../components/ProductList";
+import CartProductListItem from "../components/CartProductListItem";
 import FormValidator from "../components/FormValidator";
-import { data } from "../utils/cartProducts";
+import { cartProductsData } from "../utils/cartProductsData";
+import { missingProductData } from "../utils/missingProductsData";
 import { validationConfig } from "../utils/validationConfig";
 import { emptyFieldErrorMessages } from "../utils/emptyFieldErrorMessages";
 import { invalidEmailErrorMessages } from "../utils/invalidEmailErrorMessages";
@@ -48,11 +50,11 @@ function handleDeleteClick(productElement) {
 }
 
 function createCartProduct({ data, templateSelector }, handleToggleLike, handleDeleteClick) {
-  const cartProduct = new CartProduct({ data, templateSelector }, handleToggleLike, handleDeleteClick);
-  return cartProduct.generateCartProduct();
+  const cartProduct = new CartProductListItem({ data, templateSelector }, handleToggleLike, handleDeleteClick);
+  return cartProduct.generateProductItem();
 }
 
-const cartProductList = new CartProductList({
+const cartProductList = new ProductList({
   renderer: (productData) => {
     const cartProductElement = createCartProduct({
       data: {
@@ -74,4 +76,27 @@ const cartProductList = new CartProductList({
   }
 }, ".cart-items-list");
 
-cartProductList.renderItems(data);
+cartProductList.renderItems(cartProductsData);
+
+function createMissingProduct({ data, templateSelector }, handleToggleLike, handleDeleteClick) {
+  const missingProduct = new ProductListItem({ data, templateSelector }, handleToggleLike, handleDeleteClick);
+  return missingProduct.generateProductItem();
+}
+
+const missingProductList = new ProductList({
+  renderer: (productData) => {
+    const missingProductElement = createMissingProduct({
+      data: {
+        id: productData.id,
+        name: productData.name,
+        image: productData.image,
+        color: productData.color,
+        size: productData.size,
+      },
+      templateSelector: ".template-missing-item"
+    }, handleToggleLike, handleDeleteClick);
+    missingProductList.addItem(missingProductElement);
+  }
+}, ".cart-items-list_missing-goods");
+
+missingProductList.renderItems(missingProductData);
