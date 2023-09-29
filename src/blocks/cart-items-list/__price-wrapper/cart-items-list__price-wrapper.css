@@ -5,6 +5,7 @@
   align-items: flex-end;
   justify-content: flex-start;
   gap: 7px;
+  position: relative;
 }
 
 @media screen and (max-width: 1023px) {

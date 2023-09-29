@@ -193,9 +193,10 @@
 
 @import url(../blocks/info-tooltip/info-tooltip.css);
 @import url(../blocks/info-tooltip/__row/info-tooltip__row.css);
-@import url(../blocks/info-tooltip/_hidden/info-tooltip_hidden.css);
+@import url(../blocks/info-tooltip/_opened/info-tooltip_opened.css);
 @import url(../blocks/info-tooltip/_free-return/info-tooltip_free-return.css);
 @import url(../blocks/info-tooltip/_discount/info-tooltip_discount.css);
+@import url(../blocks/info-tooltip/_deliverer/info-tooltip_deliverer.css);
 
 @import url(../blocks/radio-button/radio-button.css);
 @import url(../blocks/radio-button/__input/radio-button__input.css);

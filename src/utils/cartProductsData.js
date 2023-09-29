@@ -7,10 +7,8 @@ export const cartProductsData = [
     "size": "56",
     "warehouse": "Коледино WB",
     "deliverer": "ООО Вайлдберриз",
-    "delivererInfo": {
-      "number": "ОГРН: 5167746237148",
-      "address": "129337, Москва, улица Красная Сосна, 2, корпус 1, стр. 1, помещение 2, офис 34"
-    },
+    "delivererNumber": "ОГРН: 1067746062449",
+    "delivererAddress": "142181, Московская область, д Коледино, тер. Индустриальный Парк Коледино, д. 6 стр. 1",
     "quantity": 1,
     "price": 522,
     "oldPrice": 1051,
@@ -26,10 +24,8 @@ export const cartProductsData = [
     "size": "",
     "warehouse": "Коледино WB",
     "deliverer": "OOO Мегапрофстиль",
-    "delivererInfo": {
-      "number": "ОГРН: 5167746237148",
-      "address": "129337, Москва, улица Красная Сосна, 2, корпус 1, стр. 1, помещение 2, офис 34"
-    },
+    "delivererNumber": "ОГРН: 5167746237148",
+    "delivererAddress": "129337, Москва, улица Красная Сосна, 2, корпус 1, стр. 1, помещение 2, офис 34",
     "quantity": 200,
     "price": 10500,
     "oldPrice": 2300047,
@@ -45,10 +41,8 @@ export const cartProductsData = [
     "size": "",
     "warehouse": "Коледино WB",
     "deliverer": "OOO Вайлдберриз",
-    "delivererInfo": {
-      "number": "ОГРН: 5167746237148",
-      "address": "129337, Москва, улица Красная Сосна, 2, корпус 1, стр. 1, помещение 2, офис 34"
-    },
+    "delivererNumber": "ОГРН: 1067746062449",
+    "delivererAddress": "142181, Московская область, д Коледино, тер. Индустриальный Парк Коледино, д. 6 стр. 1",
     "quantity": 2,
     "price": 247,
     "oldPrice": 950,

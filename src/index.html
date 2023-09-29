@@ -319,23 +319,6 @@
     </ul>
   </nav>
 
-  <div class="info-tooltip info-tooltip_hidden">
-    <h3 class="section__subtext section__subtext_bold">OOO «МЕГАПРОФСТИЛЬ»</h3>
-    <p class="section__subtext">ОГРН: 5167746237148</p>
-    <p class="section__subtext">129337, Москва, улица Красная Сосна, 2, корпус 1, стр. 1, помещение 2, офис 34</p>
-  </div>
-
-  <div class="info-tooltip info-tooltip_discount info-tooltip_hidden">
-    <div class="info-tooltip__row">
-      <p class="section__subtext section__subtext_grey">Скидка 55%</p>
-      <p class="section__subtext">−300 сом</p>
-    </div>
-    <div class="info-tooltip__row">
-      <p class="section__subtext section__subtext_grey">Скидка покупателя 10%</p>
-      <p class="section__subtext">−30 сом</p>
-    </div>
-  </div>
-
   <div class="popup popup_type_payment-method">
     <div class="popup__container">
       <button class="popup__close-button button" type="button"></button>
@@ -467,7 +450,7 @@
             </div>
           </div>
           <div class="cart-items-list__text">
-            <label class="cart-items-list__item-name" for="#">Футболка UZcotton мужская</label>
+            <label class="cart-items-list__item-name" for="#"></label>
             <div class="cart-items-list__description">
               <span class="section__subtext cart-items-list__color-el">Цвет: <span class="section__subtext cart-items-list__color"></span></span>
               <span class="section__subtext cart-items-list__subtext cart-items-list__size-el">Размер: <span class="section__subtext cart-items-list__subtext cart-items-list__size"></span></span>
@@ -477,6 +460,11 @@
               <div class="cart-items-list__icon-span-wrapper">
                 <span class="section__subtext section__subtext_grey cart-items-list__subtext cart-items-list__deliverer"></span>
                 <img class="cart-items-list__info-icon" src="<%=require('./images/info_icon.svg')%>" alt="Иконка Информация" />
+              </div>
+              <div class="info-tooltip info-tooltip_deliverer">
+                <h3 class="section__subtext section__subtext_bold cart-items-list__deliverer-name"></h3>
+                <p class="section__subtext cart-items-list__deliverer-ogrn"></p>
+                <p class="section__subtext cart-items-list__deliverer-address"></p>
               </div>
             </div>
           </div>
@@ -505,6 +493,16 @@
           <div class="cart-items-list__old-price-with-currency">
             <span class="section__subtext section__subtext_grey cart-items-list__old-price"></span>
             <span class="section__subtext section__subtext_grey">сом</span>
+          </div>
+          <div class="info-tooltip info-tooltip_discount">
+            <div class="info-tooltip__row">
+              <p class="section__subtext section__subtext_grey">Скидка 55%</p>
+              <p class="section__subtext">−300 сом</p>
+            </div>
+            <div class="info-tooltip__row">
+              <p class="section__subtext section__subtext_grey">Скидка покупателя 10%</p>
+              <p class="section__subtext">−30 сом</p>
+            </div>
           </div>
         </div>
       </div>

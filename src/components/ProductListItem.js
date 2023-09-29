@@ -23,7 +23,7 @@ export default class ProductListItem {
     this._element = null;
   }
 
-  _setEventListeners() {
+  setEventListeners() {
     this._buttonPutLike.addEventListener('click', () => {
       this._handleToggleLike(this);
     });
@@ -63,7 +63,7 @@ export default class ProductListItem {
     this._buttonPutLike = this._element.querySelector('.cart-items-list__like-button');
     this._buttonDelete = this._element.querySelector('.cart-items-list__delete-button');
 
-    this._setEventListeners();
+    this.setEventListeners();
 
     return this._element;
   }

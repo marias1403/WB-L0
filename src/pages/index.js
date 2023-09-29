@@ -91,6 +91,7 @@ textsTooltipFreeReturn.forEach(text => {
     const parentNode = e.target;
     parentNode.appendChild(tooltip);
     parentNode.style.position = 'relative';
+    tooltip.style.display = "flex";
     tooltip.style.top = parentNode.offsetHeight + 'px';
     tooltip.style.left = (- (tooltip.offsetWidth - parentNode.offsetWidth) / 2) + 'px';
   });
@@ -129,6 +130,8 @@ const cartProductList = new ProductList({
         size: productData.size,
         warehouse: productData.warehouse,
         deliverer: productData.deliverer,
+        delivererNumber: productData.delivererNumber,
+        delivererAddress: productData.delivererAddress,
         price: productData.price,
         oldPrice: productData.oldPrice,
         remainingGoods: productData.remainingGoods,
@@ -136,6 +139,7 @@ const cartProductList = new ProductList({
       },
       templateSelector: ".template"
     }, handleToggleLike, handleDeleteClick);
+
     cartProductList.addItem(cartProductElement);
   }
 }, ".cart-items-list");
