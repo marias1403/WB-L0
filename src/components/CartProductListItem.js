@@ -13,6 +13,14 @@ export default class CartProductListItem extends ProductListItem {
     this._delivererInfoIcon.addEventListener("mouseout", () => {
       this._delivererTooltip.style.display = "none";
     });
+
+    this._discountPrice.addEventListener("mouseover", () => {
+      this._discountTooltip.style.display = "flex";
+    });
+
+    this._discountPrice.addEventListener("mouseout", () => {
+      this._discountTooltip.style.display = "none";
+    });
   }
 
   generateProductItem() {
@@ -51,6 +59,9 @@ export default class CartProductListItem extends ProductListItem {
 
     this._delivererInfoIcon = this._element.querySelector(".cart-items-list__info-icon");
     this._delivererTooltip = this._element.querySelector(".info-tooltip_deliverer");
+
+    this._discountPrice = this._element.querySelector(".info-tooltip__text");
+    this._discountTooltip = this._element.querySelector(".info-tooltip_discount");
 
     this.setTooltipListeners();
 

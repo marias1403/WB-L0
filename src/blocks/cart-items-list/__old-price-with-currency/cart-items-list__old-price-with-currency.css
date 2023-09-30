@@ -2,6 +2,7 @@
   border-bottom: 1px dashed rgba(0, 0, 0, 0.20);
   text-align: right;
   position: relative;
+  cursor: pointer;
 }
 
 .cart-items-list__old-price-with-currency::after {
