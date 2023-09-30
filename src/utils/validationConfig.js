@@ -5,4 +5,5 @@ export const validationConfig = {
   inactiveButtonClass: "submit-button_disabled",
   inputErrorClass: "recipient__input_invalid",
   errorClass: "recipient__error-message_visible",
+  spanClass: ".section__subtext_recipient",
 };

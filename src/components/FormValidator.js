@@ -4,11 +4,15 @@ export default class FormValidator {
     this._formElement = formElement;
     this._buttonSubmit = document.querySelector(this._config.submitButtonSelector);
     this._inputs = Array.from(formElement.querySelectorAll(this._config.inputSelector));
+    this._inputSpan = document.querySelector(this._config.spanClass);
     this._emptyFieldErrorMessages = emptyFieldErrorMessages;
     this._invalidEmailErrorMessages = invalidEmailErrorMessages;
   }
 
   _showInputError = (input) => {
+    if (input.id === "recipientINN") {
+      this._inputSpan.style.display = "none";
+    }
     const error = this._formElement.querySelector(`#${input.id}-error`);
     input.classList.add(this._config.inputErrorClass);
     error.classList.add(this._config.errorClass);
@@ -16,6 +20,9 @@ export default class FormValidator {
   }
 
   _showEmptyInputError = (input) => {
+    if (input.id === "recipientINN") {
+      this._inputSpan.style.display = "none";
+    }
     const error = this._formElement.querySelector(`#${input.id}-error`);
     input.classList.add(this._config.inputErrorClass);
     error.classList.add(this._config.errorClass);
@@ -23,6 +30,9 @@ export default class FormValidator {
   }
 
   _hideInputError = (input) => {
+    if (input.id === "recipientINN") {
+      this._inputSpan.style.display = "block";
+    }
     const error = this._formElement.querySelector(`#${input.id}-error`);
     input.classList.remove(this._config.inputErrorClass);
     error.classList.remove(this._config.errorClass);
