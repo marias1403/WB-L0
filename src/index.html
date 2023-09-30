@@ -166,7 +166,6 @@
                       class="recipient__input"
                       placeholder="Имя"
                       aria-label="Имя"
-                      required
                       minlength="2">
                     <span id="recipientName-error" class="recipient__error-message"></span>
                   </div>
@@ -179,7 +178,6 @@
                       class="recipient__input"
                       placeholder="Фамилия"
                       aria-label="Фамилия"
-                      required
                       minlength="2">
                     <span id="recipientLastName-error" class="recipient__error-message"></span>
                   </div>
@@ -193,8 +191,7 @@
                       name="recipientEmail"
                       class="recipient__input"
                       placeholder="Почта"
-                      aria-label="Почта"
-                      required>
+                      aria-label="Почта">
                     <span id="recipientEmail-error" class="recipient__error-message"></span>
                   </div>
                   <div class="recipient__input-wrapper">
@@ -206,7 +203,6 @@
                       class="recipient__input"
                       placeholder="Телефон"
                       aria-label="Телефон"
-                      required
                       pattern="^\+\d{1,2} \d{3} \d{3} \d{2} \d{2}$"
                       maxlength="30">
                     <span id="recipientPhoneNumber-error" class="recipient__error-message"></span>
@@ -220,7 +216,6 @@
                       class="recipient__input"
                       placeholder="ИНН"
                       aria-label="ИНН"
-                      required
                       size="14"
                       pattern="\d{14}">
                     <span class="section__subtext section__subtext_recipient">Для таможенного оформления</span>
@@ -291,7 +286,7 @@
             </div>
           </div>
           <div class="order-summary__button-wrapper">
-            <button class="submit-button submit-button_order-summary button">Заказать</button>
+            <button class="submit-button submit-button_order-summary button" type="submit">Заказать</button>
             <div class="order-summary__terms-of-use-container">
               <img src="<%=require('./images/terms_of_use_icon.svg')%>" />
               <span class="section__subtext">Соглашаюсь <a href="#" class="section__subtext section__subtext_link">с правилами пользования торговой площадкой</a> и <a href="/" class="section__subtext section__subtext_link">возврата</a></span>
