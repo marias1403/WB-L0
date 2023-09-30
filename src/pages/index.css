@@ -110,9 +110,6 @@
 @import url(../blocks/cart-items-list/__quantity-with-span/cart-items-list__quantity-with-span.css);
 
 @import url(../blocks/checkbox/checkbox.css);
-@import url(../blocks/checkbox/__input/checkbox__input.css);
-@import url(../blocks/checkbox/__span/checkbox__span.css);
-@import url(../blocks/checkbox/__span/_order-summary/checkbox__span_order-summary.css);
 @import url(../blocks/checkbox/_position/checkbox_position.css);
 
 @import url(../blocks/dropdown/__button/dropdown__button.css);

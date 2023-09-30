@@ -3,15 +3,45 @@
   height: 22px;
   position: relative;
   cursor: pointer;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
 }
 
-.checkbox:hover {
-  background-image: url(../../images/checkbox_icon_hover.svg);
-  background-repeat: no-repeat;
+.checkbox__input {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 22px;
+  height: 22px;
+  cursor: pointer;
+  opacity: 0;
+  z-index: 1;
+}
+
+.checkbox__checkmark {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 22px;
+  width: 22px;
+  border: 1px solid #C4C4C4;
+  background-color: transparent;
+  box-sizing: border-box;
+  border-radius: 6px;
+  overflow: hidden;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.checkbox__input:checked ~ .checkbox__checkmark {
+  background-color: #CB11AB;
+  background-image: url("../../images/checkbox_checkmark.svg");
   background-position: center;
-  background-size: 22px 22px;
+  background-repeat: no-repeat;
+  background-size: 14px 14px;
+  border: none;
+}
+
+@media screen and (max-width: 1023px) {
+  .checkbox__checkmark_list {
+    background-color: #ffffff;
+  }
 }
