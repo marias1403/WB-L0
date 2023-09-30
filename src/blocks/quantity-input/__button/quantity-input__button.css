@@ -17,6 +17,11 @@
   outline: none;
 }
 
+.quantity-input__button[disabled] {
+  opacity: 0.2;
+  cursor: not-allowed;
+}
+
 @media screen and (max-width: 1023px) {
   .quantity-input__button {
 

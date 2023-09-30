@@ -21,6 +21,22 @@ export default class CartProductListItem extends ProductListItem {
     this._discountPrice.addEventListener("mouseout", () => {
       this._discountTooltip.style.display = "none";
     });
+
+    this._btnIncreaseQuantity.addEventListener("click", () => {
+      if (this._quantityInput.value < this._data.remainingGoods) {
+        this._quantityInput.value = parseInt(this._quantityInput.value) + 1;
+        this._btnDecreaseQuantity.disabled = false;
+      }
+      this._btnIncreaseQuantity.disabled = parseInt(this._quantityInput.value) >= this._data.remainingGoods;
+    });
+
+    this._btnDecreaseQuantity.addEventListener("click", () => {
+      if (this._quantityInput.value > 0) {
+        this._quantityInput.value = parseInt(this._quantityInput.value) - 1;
+        this._btnIncreaseQuantity.disabled = false;
+      }
+      this._btnDecreaseQuantity.disabled = parseInt(this._quantityInput.value) <= 0;
+    });
   }
 
   generateProductItem() {
@@ -32,7 +48,19 @@ export default class CartProductListItem extends ProductListItem {
     this._element.querySelector(".cart-items-list__deliverer-name").textContent = this._data.deliverer;
     this._element.querySelector(".cart-items-list__deliverer-ogrn").textContent = this._data.delivererNumber;
     this._element.querySelector(".cart-items-list__deliverer-address").textContent = this._data.delivererAddress;
-    this._element.querySelector(".quantity-input__count").value = this._data.quantity;
+
+    this._quantityInput = this._element.querySelector(".quantity-input__count");
+    this._quantityInput.value = this._data.quantity;
+    this._btnIncreaseQuantity = this._element.querySelector('[data-action="add"]');
+    this._btnDecreaseQuantity = this._element.querySelector('[data-action="minus"]');
+
+    if (parseInt(this._quantityInput.value) <= 0) {
+      this._btnDecreaseQuantity.disabled = true;
+    }
+
+    if (parseInt(this._quantityInput.value) >= this._data.remainingGoods) {
+      this._btnIncreaseQuantity.disabled = true;
+    }
 
     const prices = this._element.querySelectorAll(".cart-items-list__price");
     prices.forEach(price => {

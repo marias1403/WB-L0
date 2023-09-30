@@ -29,7 +29,7 @@ export const cartProductsData = [
     "quantity": 200,
     "price": 10500,
     "oldPrice": 2300047,
-    "remainingGoods": 210,
+    "remainingGoods": 999,
     "isSelected": false,
     "isLiked": false
   },
