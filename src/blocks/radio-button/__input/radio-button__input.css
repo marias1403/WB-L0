@@ -1,9 +1,0 @@
-.radio-button__input {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 20px;
-  height: 24px;
-  cursor: pointer;
-  opacity: 0;
-}

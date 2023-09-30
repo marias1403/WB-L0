@@ -111,6 +111,7 @@
 
 @import url(../blocks/checkbox/checkbox.css);
 @import url(../blocks/checkbox/_position/checkbox_position.css);
+@import url(../blocks/radio-button/radio-button.css);
 
 @import url(../blocks/dropdown/__button/dropdown__button.css);
 @import url(../blocks/dropdown/__button/_closed/dropdown__button_closed.css);
@@ -194,10 +195,6 @@
 @import url(../blocks/info-tooltip/_free-return/info-tooltip_free-return.css);
 @import url(../blocks/info-tooltip/_discount/info-tooltip_discount.css);
 @import url(../blocks/info-tooltip/_deliverer/info-tooltip_deliverer.css);
-
-@import url(../blocks/radio-button/radio-button.css);
-@import url(../blocks/radio-button/__input/radio-button__input.css);
-@import url(../blocks/radio-button/__span/radio-button__span.css);
 
 @import url(../blocks/popup/popup.css);
 @import url(../blocks/popup/_opened/popup_opened.css);
