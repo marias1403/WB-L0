@@ -13,7 +13,7 @@ export default class FormValidator {
     input.classList.add(this._config.inputErrorClass);
     error.classList.add(this._config.errorClass);
     error.textContent = this._invalidEmailErrorMessages[input.id];
-  };
+  }
 
   _showEmptyInputError = (input) => {
     const error = this._formElement.querySelector(`#${input.id}-error`);
@@ -27,7 +27,7 @@ export default class FormValidator {
     input.classList.remove(this._config.inputErrorClass);
     error.classList.remove(this._config.errorClass);
     error.textContent = '';
-  };
+  }
 
   _validateInput = (input) => {
     if (!input.validity.valid) {
@@ -35,21 +35,32 @@ export default class FormValidator {
     } else {
       this._hideInputError(input);
     }
-  };
+  }
 
   formatPhoneNumber(input) {
-    const cleanedValue = input.value.replace(/\D/g, '');
-    input.value = cleanedValue.replace(/(\d{1,2})(\d{3})(\d{3})(\d{2})(\d{2})/, '+$1 $2 $3 $4 $5');
+    const cleanedValue = input.value.replace(/\D/g, "");
+    input.value = cleanedValue.replace(/(\d{1,2})(\d{3})(\d{3})(\d{2})(\d{2})/, "+$1 $2 $3 $4 $5");
     this._validateInput(input);
   }
 
   _setEventListeners = () => {
     this._inputs.forEach((input) => {
-      input.addEventListener('blur', () => {
-        if (input.id === 'recipientPhoneNumber') {
+      input.addEventListener("blur", () => {
+        if (input.id === "recipientPhoneNumber") {
           this.formatPhoneNumber(input);
         } else {
           this._validateInput(input);
+        }
+      });
+    });
+
+    this._inputs.forEach((input) => {
+      input.addEventListener("input", () => {
+        const label = document.querySelector(`label[for="${input.id}"]`);
+        if (input.value.trim() !== "") {
+          label.style.opacity = "1";
+        } else {
+          label.style.opacity = "0";
         }
       });
     });
@@ -58,7 +69,7 @@ export default class FormValidator {
   enableValidation = () => {
     this._buttonSubmit.addEventListener("click", () => {
       this._inputs.forEach((input) => {
-        if (input.value === "") {
+        if (input.value.trim() === "") {
           this._showEmptyInputError(input);
         }
       });
