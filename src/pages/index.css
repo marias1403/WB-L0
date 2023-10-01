@@ -195,6 +195,7 @@
 @import url(../blocks/info-tooltip/_free-return/info-tooltip_free-return.css);
 @import url(../blocks/info-tooltip/_discount/info-tooltip_discount.css);
 @import url(../blocks/info-tooltip/_deliverer/info-tooltip_deliverer.css);
+@import url(../blocks/info-tooltip/__span-wrapper/info-tooltip__span-wrapper.css);
 
 @import url(../blocks/popup/popup.css);
 @import url(../blocks/popup/_opened/popup_opened.css);

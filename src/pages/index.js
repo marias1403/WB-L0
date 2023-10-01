@@ -191,23 +191,9 @@ function createCartProduct({ data, templateSelector }, handleToggleLike, handleD
 }
 
 const cartProductList = new ProductList({
-  renderer: (productData) => {
+  renderer: (data) => {
     const cartProductElement = createCartProduct({
-      data: {
-        id: productData.id,
-        name: productData.name,
-        image: productData.image,
-        color: productData.color,
-        size: productData.size,
-        warehouse: productData.warehouse,
-        deliverer: productData.deliverer,
-        delivererNumber: productData.delivererNumber,
-        delivererAddress: productData.delivererAddress,
-        price: productData.price,
-        oldPrice: productData.oldPrice,
-        remainingGoods: productData.remainingGoods,
-        quantity: productData.quantity
-      },
+      data,
       templateSelector: ".template"
     }, handleToggleLike, handleDeleteClick);
 

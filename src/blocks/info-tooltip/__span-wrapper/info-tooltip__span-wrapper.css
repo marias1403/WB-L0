@@ -1,0 +1,6 @@
+.info-tooltip__span-wrapper {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+}
