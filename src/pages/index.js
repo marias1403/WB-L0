@@ -25,7 +25,11 @@ import {
   dropdownContent2,
   dividerLine2,
   textsTooltipFreeReturn,
-  freeReturnTooltipTemplate
+  freeReturnTooltipTemplate,
+  immediatePaymentCheckbox,
+  immediatePaymentSpan,
+  paymentMethodSpan,
+  mainSubmitButton
 } from "../utils/constants";
 
 const formValidators = {};
@@ -69,6 +73,20 @@ function toggleDropdown2() {
   }
 }
 btnDropdown2.addEventListener("click", toggleDropdown2);
+
+immediatePaymentCheckbox.addEventListener("change", () => {
+  if (immediatePaymentCheckbox.checked) {
+    immediatePaymentSpan.style.display = "none";
+    paymentMethodSpan.style.display = "none";
+    document.querySelector(".order-summary__checkbox-wrapper").style.marginBottom = "0";
+    mainSubmitButton.textContent = "Оплатить 1 016 сом";
+  } else {
+    immediatePaymentSpan.style.display = "block";
+    paymentMethodSpan.style.display = "block";
+    document.querySelector(".order-summary__checkbox-wrapper").style.marginBottom = "8px";
+    mainSubmitButton.textContent = "Заказать";
+  }
+});
 
 function handlePaymentMethodFormSubmit() {
   const selectedOption = document.querySelector('input[name="creditCard"]:checked');

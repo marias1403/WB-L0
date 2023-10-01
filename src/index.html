@@ -150,7 +150,7 @@
                   <span class="section__text card-number-result">1234 56•• •••• 1234</span>
                   <span class="section__text section__subtext_padding-left-4 card-validity-result">01/30</span>
                 </div>
-                <p class="section__subtext section__subtext_grey section__subtext_margin-top-8">Спишем оплату с карты при получении</p>
+                <p class="section__subtext section__subtext_grey section__subtext_margin-top-8" id="payment-method-span">Спишем оплату с карты при получении</p>
               </div>
             </section>
             <section class="recipient info-block info-block_gap-16 info-block_recipient content__section section">
@@ -282,11 +282,11 @@
                 </div>
                 <label for="immediate-payment" class="section__subtext">Списать оплату сразу</label>
               </div>
-              <p class="section__subtext">Спишем оплату с карты при получении</p>
+              <p class="section__subtext" id="immediate-payment-span">Спишем оплату с карты при получении</p>
             </div>
           </div>
           <div class="order-summary__button-wrapper">
-            <button class="submit-button submit-button_order-summary button" type="submit">Заказать</button>
+            <button class="submit-button submit-button_order-summary button" type="submit" id="main-submit-button">Заказать</button>
             <div class="order-summary__terms-of-use-container">
               <img src="<%=require('./images/terms_of_use_icon.svg')%>" />
               <span class="section__subtext">Соглашаюсь <a href="#" class="section__subtext section__subtext_link">с правилами пользования торговой площадкой</a> и <a href="/" class="section__subtext section__subtext_link">возврата</a></span>

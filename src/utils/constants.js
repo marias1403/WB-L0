@@ -14,3 +14,11 @@ export const dividerLine2 = document.getElementById("dividerLine2");
 
 export const textsTooltipFreeReturn = document.querySelectorAll(".free-return-info");
 export const freeReturnTooltipTemplate = document.querySelector(".template-tooltip-free-return");
+
+export const immediatePaymentCheckbox = document.getElementById("immediate-payment");
+
+export const immediatePaymentSpan = document.getElementById("immediate-payment-span");
+
+export const paymentMethodSpan = document.getElementById("payment-method-span");
+
+export const mainSubmitButton = document.getElementById("main-submit-button");
