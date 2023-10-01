@@ -1,6 +1,6 @@
 .popup__container {
   width: 400px;
-  height: 408px;
+  height: fit-content;
   padding: 16px 24px 24px;
   border-radius: 16px;
   background-color: #ffffff;

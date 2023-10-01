@@ -211,3 +211,5 @@
 @import url(../blocks/popup/__toggle-wrapper/popup__toggle-wrapper.css);
 @import url(../blocks/popup/__toggle-button/popup__toggle-button.css);
 @import url(../blocks/popup/__toggle-button/_active/popup__toggle-button_active.css);
+@import url(../blocks/popup/__rating-wrapper/popup__rating-wrapper.css);
+@import url(../blocks/popup/__rating-icon/popup__rating-icon.css);

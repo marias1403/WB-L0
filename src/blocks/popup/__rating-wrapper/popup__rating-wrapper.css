@@ -1,0 +1,8 @@
+.popup__rating-wrapper {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+  column-gap: 4px;
+  margin-top: 4px;
+}

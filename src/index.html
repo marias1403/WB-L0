@@ -377,43 +377,97 @@
       <button class="popup__close-button button" type="button"></button>
       <h2 class="popup__title">Способ доставки</h2>
       <div class="popup__toggle-wrapper">
-        <button class="popup__toggle-button button" type="button">В пункт выдачи</button>
-        <button class="popup__toggle-button popup__toggle-button_active button" type="button">Курьером</button>
+        <button class="popup__toggle-button button" type="button" id="btnPickupAddr">В пункт выдачи</button>
+        <button class="popup__toggle-button button" type="button" id="btnCourierAddr">Курьером</button>
       </div>
       <h3 class="section__subtext section__subtext_bold">Мои адреса</h3>
-      <form class="popup__form popup__form_delivery">
+      <form class="popup__form popup__form_delivery" id="courierAddressesForm">
         <div class="popup__form-row">
           <div class="popup__address-wrapper">
             <div class="radio-button">
-              <input class="radio-button__input" type="radio" id="address1" name="addresses" value="address1">
+              <input class="radio-button__input" type="radio" id="addressCourier1" name="courierAddresses" value="addressCourier1">
               <span class="radio-button__checkmark"></span>
             </div>
-            <label class="section__text" for="address1">Бишкек, улица Табышалиева, 57</label>
+            <label class="section__text" for="addressCourier1">Бишкек, улица Табышалиева, 57</label>
           </div>
           <button class="delete-button"></button>
         </div>
         <div class="popup__form-row">
           <div class="popup__address-wrapper">
             <div class="radio-button">
-              <input class="radio-button__input" type="radio" id="address2" name="addresses" value="address2">
+              <input class="radio-button__input" type="radio" id="addressCourier2" name="courierAddresses" value="addressCourier2">
               <span class="radio-button__checkmark"></span>
             </div>
-            <label class="section__text" for="address2">Бишкек, улица Жукеева-Пудовкина, 77/1</label>
+            <label class="section__text" for="addressCourier2">Бишкек, улица Жукеева-Пудовкина, 77/1</label>
           </div>
           <button class="delete-button"></button>
         </div>
         <div class="popup__form-row">
           <div class="popup__address-wrapper">
             <div class="radio-button">
-              <input class="radio-button__input" type="radio" id="address3" name="addresses" value="address3">
+              <input class="radio-button__input" type="radio" id="addressCourier3" name="courierAddresses" value="addressCourier3">
               <span class="radio-button__checkmark"></span>
             </div>
-            <label class="section__text" for="address3">Бишкек, микрорайон Джал, улица Ахунбаева Исы, 67/1</label>
+            <label class="section__text" for="addressCourier3">Бишкек, микрорайон Джал, улица Ахунбаева Исы, 67/1</label>
           </div>
           <button class="delete-button"></button>
         </div>
+        <button class="submit-button submit-button_delivery-popup button" type="submit">Выбрать</button>
       </form>
-      <button class="submit-button submit-button_delivery-popup button">Выбрать</button>
+      <form class="popup__form popup__form_delivery" id="pickupAddressesForm">
+        <div class="popup__form-row">
+          <div class="popup__address-wrapper">
+            <div class="radio-button">
+              <input class="radio-button__input" type="radio" id="addressPickup1" name="pickupAddresses" value="addressPickup1">
+              <span class="radio-button__checkmark"></span>
+            </div>
+            <div class="popup__label-wrapper">
+              <label class="section__text" for="addressPickup1">г. Бишкек, микрорайон Джал, улица Ахунбаева Исы, д. 67/1</label>
+              <div class="popup__rating-wrapper">
+                <img class="popup__rating-icon" src="<%=require('./images/rating_icon.svg')%>" alt="Иконка рейтинга, звезда"/>
+                <span class="section__subtext">4.99</span>
+                <span class="section__subtext section__subtext_grey section__subtext_padding-left-4">Пункт выдачи</span>
+              </div>
+            </div>
+          </div>
+          <button class="delete-button"></button>
+        </div>
+        <div class="popup__form-row">
+          <div class="popup__address-wrapper">
+            <div class="radio-button">
+              <input class="radio-button__input" type="radio" id="addressPickup2" name="pickupAddresses" value="addressPickup2">
+              <span class="radio-button__checkmark"></span>
+            </div>
+            <div class="popup__label-wrapper">
+              <label class="section__text" for="addressPickup2">г. Бишкек, микрорайон Джал, улица Ахунбаева Исы, д. 67/1</label>
+              <div class="popup__rating-wrapper">
+                <img class="popup__rating-icon" src="<%=require('./images/rating_icon.svg')%>" alt="Иконка рейтинга, звезда"/>
+                <span class="section__subtext">4.99</span>
+                <span class="section__subtext section__subtext_grey section__subtext_padding-left-4">Пункт выдачи</span>
+              </div>
+            </div>
+          </div>
+          <button class="delete-button"></button>
+        </div>
+        <div class="popup__form-row">
+          <div class="popup__address-wrapper">
+            <div class="radio-button">
+              <input class="radio-button__input" type="radio" id="addressPickup3" name="pickupAddresses" value="addressPickup3">
+              <span class="radio-button__checkmark"></span>
+            </div>
+            <div class="popup__label-wrapper">
+              <label class="section__text" for="addressPickup3">г. Бишкек, улица Табышалиева, д. 57</label>
+              <div class="popup__rating-wrapper">
+                <img class="popup__rating-icon" src="<%=require('./images/rating_icon.svg')%>" alt="Иконка рейтинга, звезда"/>
+                <span class="section__subtext">4.99</span>
+                <span class="section__subtext section__subtext_grey section__subtext_padding-left-4">Пункт выдачи</span>
+              </div>
+            </div>
+          </div>
+          <button class="delete-button"></button>
+        </div>
+        <button class="submit-button submit-button_delivery-popup button" type="submit">Выбрать</button>
+      </form>
     </div>
   </div>
 
