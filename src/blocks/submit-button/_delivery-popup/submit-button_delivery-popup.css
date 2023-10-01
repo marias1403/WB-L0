@@ -2,3 +2,9 @@
   margin-top: 57px;
   width: 164px;
 }
+
+@media screen and (max-width: 1023px) {
+  .submit-button_delivery-popup {
+    margin-top: 137px;
+  }
+}

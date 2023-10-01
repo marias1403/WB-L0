@@ -2,3 +2,9 @@
   margin-top: 139px;
   width: 164px;
 }
+
+@media screen and (max-width: 1023px) {
+  .submit-button_payment-popup {
+    margin-top: 349px;
+  }
+}

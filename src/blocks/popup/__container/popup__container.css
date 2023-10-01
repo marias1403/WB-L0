@@ -8,3 +8,11 @@
   box-sizing: border-box;
   position: relative;
 }
+
+@media screen and (max-width: 1023px) {
+  .popup__container {
+    max-width: 400px;
+    min-height: 594px;
+    margin-inline: 10px;
+  }
+}
