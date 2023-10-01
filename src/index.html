@@ -318,10 +318,10 @@
     <div class="popup__container">
       <button class="popup__close-button button" type="button"></button>
       <h2 class="popup__title">Способ оплаты</h2>
-      <form class="popup__form">
+      <form class="popup__form" id="paymentMethodForm">
         <div class="popup__radio">
           <div class="radio-button">
-            <input class="radio-button__input" type="radio" id="mir" name="credit-card" value="MIR">
+            <input class="radio-button__input" type="radio" id="mir" name="creditCard" value="MIR">
             <span class="radio-button__checkmark"></span>
           </div>
           <div class="popup__card">
@@ -333,7 +333,7 @@
         </div>
         <div class="popup__radio">
           <div class="radio-button">
-            <input class="radio-button__input" type="radio" id="visa" name="credit-card" value="VISA">
+            <input class="radio-button__input" type="radio" id="visa" name="creditCard" value="VISA">
             <span class="radio-button__checkmark"></span>
           </div>
           <div class="popup__card">
@@ -345,7 +345,7 @@
         </div>
         <div class="popup__radio">
           <div class="radio-button">
-            <input class="radio-button__input" type="radio" id="mastercard" name="credit-card" value="MasterCard">
+            <input class="radio-button__input" type="radio" id="mastercard" name="creditCard" value="MasterCard">
             <span class="radio-button__checkmark"></span>
           </div>
           <div class="popup__card">
@@ -357,7 +357,7 @@
         </div>
         <div class="popup__radio">
           <div class="radio-button">
-            <input class="radio-button__input" type="radio" id="maestro" name="credit-card" value="Maestro">
+            <input class="radio-button__input" type="radio" id="maestro" name="creditCard" value="Maestro">
             <span class="radio-button__checkmark"></span>
           </div>
           <div class="popup__card">
@@ -367,8 +367,8 @@
             <label class="section__text" for="maestro">1234 56•• •••• 1234</label><br>
           </div>
         </div>
+        <button class="submit-button submit-button_payment-popup button" type="submit">Выбрать</button>
       </form>
-      <button class="submit-button submit-button_payment-popup button" type="button">Выбрать</button>
     </div>
   </div>
 

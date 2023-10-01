@@ -51,7 +51,7 @@ export default class DeliveryPopup extends Popup {
       const selectedOption = document.querySelector('input[name="pickupAddresses"]:checked');
       if (selectedOption) {
         const choiceValue = selectedOption.value;
-        console.log('Выбран вариант:', choiceValue);
+        console.log("Выбран вариант:", choiceValue);
       }
       super.close();
     });
@@ -61,7 +61,7 @@ export default class DeliveryPopup extends Popup {
       const selectedOption = document.querySelector('input[name="courierAddresses"]:checked');
       if (selectedOption) {
         const choiceValue = selectedOption.value;
-        console.log('Выбран вариант:', choiceValue);
+        console.log("Выбран вариант:", choiceValue);
       }
       super.close();
     });
