@@ -4,4 +4,8 @@ export default class PaymentPopup extends Popup {
   constructor(popupSelector) {
     super(popupSelector);
   }
+
+  setEventListeners() {
+    super.setEventListeners();
+  }
 }

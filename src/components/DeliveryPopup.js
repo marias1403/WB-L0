@@ -48,11 +48,21 @@ export default class DeliveryPopup extends Popup {
 
     this._pickupAddressesForm.addEventListener("submit", (e) => {
       e.preventDefault();
+      const selectedOption = document.querySelector('input[name="pickupAddresses"]:checked');
+      if (selectedOption) {
+        const choiceValue = selectedOption.value;
+        console.log('Выбран вариант:', choiceValue);
+      }
       super.close();
     });
 
     this._courierAddressesForm.addEventListener("submit", (e) => {
       e.preventDefault();
+      const selectedOption = document.querySelector('input[name="courierAddresses"]:checked');
+      if (selectedOption) {
+        const choiceValue = selectedOption.value;
+        console.log('Выбран вариант:', choiceValue);
+      }
       super.close();
     });
 
