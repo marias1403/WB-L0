@@ -7,6 +7,7 @@ export default class DeliveryPopup extends Popup {
     this._btnCourierAddr = document.getElementById("btnCourierAddr");
     this._pickupAddressesForm = document.getElementById("pickupAddressesForm");
     this._courierAddressesForm = document.getElementById("courierAddressesForm");
+    this._deleteButtons = document.querySelectorAll(".delete-button_delivery-popup");
   }
 
   _selectPickupAddr() {
@@ -21,6 +22,13 @@ export default class DeliveryPopup extends Popup {
     this._btnPickupAddr.classList.remove("popup__toggle-button_active");
     this._courierAddressesForm.style.display = "flex";
     this._pickupAddressesForm.style.display = "none";
+  }
+
+  _handleDeleteAddress(e) {
+    const formRow = e.target.closest(".popup__form-row");
+    if (formRow) {
+      formRow.remove();
+    }
   }
 
   open() {
@@ -46,6 +54,12 @@ export default class DeliveryPopup extends Popup {
     this._courierAddressesForm.addEventListener("submit", (e) => {
       e.preventDefault();
       super.close();
+    });
+
+    this._deleteButtons.forEach((deleteButton) => {
+      deleteButton.addEventListener("click", (e) => {
+        this._handleDeleteAddress(e);
+      });
     });
   }
 }
