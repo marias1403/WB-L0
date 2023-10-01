@@ -10,6 +10,8 @@ import { missingProductData } from "../utils/missingProductsData";
 import { validationConfig } from "../utils/validationConfig";
 import { emptyFieldErrorMessages } from "../utils/emptyFieldErrorMessages";
 import { invalidEmailErrorMessages } from "../utils/invalidEmailErrorMessages";
+import { paymentMethodOptions } from "../utils/paymentMethodOptions";
+import { pickupPointsOptions, courierAddressesOptions } from "../utils/deliveryMethodOptions";
 import {
   btnEditPaymentText,
   btnEditPaymentIcon,
@@ -68,16 +70,67 @@ function toggleDropdown2() {
 }
 btnDropdown2.addEventListener("click", toggleDropdown2);
 
-const paymentPopup = new PaymentPopup(".popup_type_payment-method");
+function handlePaymentMethodFormSubmit() {
+  const selectedOption = document.querySelector('input[name="creditCard"]:checked');
+  if (selectedOption) {
+    const choiceValue = selectedOption.value;
+    const data = paymentMethodOptions[choiceValue];
+    const cardNumberResults = document.querySelectorAll(".card-number-result");
+    cardNumberResults.forEach((result) => {
+      result.textContent = data.number;
+    });
+    document.querySelector(".card-validity-result").textContent = data.validity;
+    const cardImageResults = document.querySelectorAll(".card-image-result");
+    cardImageResults.forEach((result) => {
+      result.alt = data.alt;
+      result.src = data.icon;
+      result.className = data.cssClass;
+    });
+  }
+}
+
+const paymentPopup = new PaymentPopup(".popup_type_payment-method", handlePaymentMethodFormSubmit);
 paymentPopup.setEventListeners();
-const deliveryPopup = new DeliveryPopup(".popup_type_delivery-method");
-deliveryPopup.setEventListeners();
 btnEditPaymentText.addEventListener("click", () => {
   paymentPopup.open();
 });
 btnEditPaymentIcon.addEventListener("click", () => {
   paymentPopup.open();
 });
+
+function handlePickupMethodFormSubmit() {
+  const selectedOption = document.querySelector('input[name="pickupAddresses"]:checked');
+  if (selectedOption) {
+    document.querySelector(".delivery-method__address-work-hours").style.display = "flex";
+    const choiceValue = selectedOption.value;
+    const data = pickupPointsOptions[choiceValue];
+    const deliveryAddressResults = document.querySelectorAll(".delivery-address-result");
+    deliveryAddressResults.forEach((result) => {
+      result.textContent = data.address;
+    });
+    document.querySelector(".delivery-rating-result").textContent = data.rating;
+    document.querySelector(".delivery-method-result").textContent = data.deliveryMethod;
+    document.querySelector(".delivery-title-result").textContent = data.title;
+  }
+}
+
+function handleCourierMethodFormSubmit() {
+  const selectedOption = document.querySelector('input[name="courierAddresses"]:checked');
+  if (selectedOption) {
+    document.querySelector(".delivery-method__address-work-hours").style.display = "none";
+    const choiceValue = selectedOption.value;
+    const data = courierAddressesOptions[choiceValue];
+    const deliveryAddressResults = document.querySelectorAll(".delivery-address-result");
+    deliveryAddressResults.forEach((result) => {
+      result.textContent = data.address;
+    });
+    document.querySelector(".delivery-method-result").textContent = data.deliveryMethod;
+    document.querySelector(".delivery-title-result").textContent = data.title;
+  }
+}
+
+const deliveryPopup = new DeliveryPopup(".popup_type_delivery-method", handlePickupMethodFormSubmit, handleCourierMethodFormSubmit);
+deliveryPopup.setEventListeners();
 btnEditDeliveryText.addEventListener("click", () => {
   deliveryPopup.open();
 });

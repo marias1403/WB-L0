@@ -92,12 +92,12 @@
               </div>
               <div class="delivery-method__content">
                 <div class="delivery-method__row">
-                  <h3 class="section__subtitle section__subtitle_semibold delivery-method__flex-column">Пункт выдачи</h3>
+                  <h3 class="section__subtitle section__subtitle_semibold delivery-method__flex-column delivery-method-result">Пункт выдачи</h3>
                   <div class="delivery-method__address-wrapper">
-                    <p class="section__text">Бишкек, улица Ахматбека Суюмбаева, 12/1</p>
+                    <p class="section__text delivery-address-result">Бишкек, улица Ахматбека Суюмбаева, 12/1</p>
                     <div class="delivery-method__address-work-hours">
                       <img class="delivery-method__rating-icon" src="<%=require('./images/rating_icon.svg')%>" alt="Рейтинг"/>
-                      <span class="section__subtext">4.99</span>
+                      <span class="section__subtext delivery-rating-result">4.99</span>
                       <span class="section__subtext section__subtext_padding-left-4">Ежедневно с 10 до 21 </span>
                     </div>
                   </div>
@@ -145,10 +145,10 @@
               <div class="payment-method__content-wrapper">
                 <div class="payment-method__card-number">
                   <div class="credit-card-icon">
-                    <img class="credit-card-icon__mir-img" src="<%=require('./images/mir.svg')%>" alt="Банковская карта Мир" />
+                    <img class="credit-card-icon__mir-img card-image-result" src="<%=require('./images/mir.svg')%>" alt="Банковская карта Мир" />
                   </div>
-                  <span class="section__text">1234 56•• •••• 1234</span>
-                  <span class="section__text section__subtext_padding-left-4">01/30</span>
+                  <span class="section__text card-number-result">1234 56•• •••• 1234</span>
+                  <span class="section__text section__subtext_padding-left-4 card-validity-result">01/30</span>
                 </div>
                 <p class="section__subtext section__subtext_grey section__subtext_margin-top-8">Спишем оплату с карты при получении</p>
               </div>
@@ -248,10 +248,10 @@
           <div class="order-summary__order-details">
             <div class="order-summary__address-text-wrapper">
               <div class="order-summary__subtitle-wrapper">
-                <h3 class="section__subtitle">Доставка в пункт выдачи</h3>
+                <h3 class="section__subtitle delivery-title-result">Доставка в пункт выдачи</h3>
                 <button class="order-summary__edit-button button" id="btnEditDeliveryIcon"></button>
               </div>
-              <p class="section__subtext">Бишкек, улица Ахматбека Суюмбаева, 12/1</p>
+              <p class="section__subtext delivery-address-result">Бишкек, улица Ахматбека Суюмбаева, 12/1</p>
               <p class="section__subtext section__subtext_purple">5–8 фев</p>
             </div>
             <div class="order-summary__highlighted-info">
@@ -269,9 +269,9 @@
               </div>
               <div class="order-summary__card-number">
                 <div class="credit-card-icon">
-                  <img class="credit-card-icon__mir-img" src="<%=require('./images/mir.svg')%>" alt="Банковская карта Мир" />
+                  <img class="credit-card-icon__mir-img card-image-result" src="<%=require('./images/mir.svg')%>" alt="Банковская карта Мир" />
                 </div>
-                <p class="section__subtext">1234 12•• •••• 1234</p>
+                <p class="section__subtext card-number-result">1234 12•• •••• 1234</p>
               </div>
             </div>
             <div class="order-summary__highlighted-info">
@@ -321,7 +321,7 @@
       <form class="popup__form" id="paymentMethodForm">
         <div class="popup__radio">
           <div class="radio-button">
-            <input class="radio-button__input" type="radio" id="mir" name="creditCard" value="MIR">
+            <input class="radio-button__input" type="radio" id="mir" name="creditCard" value="MIR" checked>
             <span class="radio-button__checkmark"></span>
           </div>
           <div class="popup__card">
@@ -338,7 +338,7 @@
           </div>
           <div class="popup__card">
             <div class="credit-card-icon">
-              <img class="credit-card-icon__visa-img" src="<%=require('./images/visa.svg')%>" alt="Банковская карта Мир" />
+              <img class="credit-card-icon__visa-img" src="<%=require('./images/visa.svg')%>" alt="Банковская карта Visa" />
             </div>
             <label class="section__text" for="visa">1234 56•• •••• 1234</label><br>
           </div>
@@ -350,7 +350,7 @@
           </div>
           <div class="popup__card">
             <div class="credit-card-icon">
-              <img class="credit-card-icon__mastercard-img" src="<%=require('./images/mastercard.svg')%>" alt="Банковская карта Мир" />
+              <img class="credit-card-icon__mastercard-img" src="<%=require('./images/mastercard.svg')%>" alt="Банковская карта MasterCard" />
             </div>
             <label class="section__text" for="mastercard">1234 56•• •••• 1234</label><br>
           </div>
@@ -362,7 +362,7 @@
           </div>
           <div class="popup__card">
             <div class="credit-card-icon">
-              <img class="credit-card-icon__maestro-img" src="<%=require('./images/maestro.svg')%>" alt="Банковская карта Мир" />
+              <img class="credit-card-icon__maestro-img" src="<%=require('./images/maestro.svg')%>" alt="Банковская карта Maestro" />
             </div>
             <label class="section__text" for="maestro">1234 56•• •••• 1234</label><br>
           </div>
@@ -385,7 +385,7 @@
         <div class="popup__form-row">
           <div class="popup__address-wrapper">
             <div class="radio-button">
-              <input class="radio-button__input" type="radio" id="addressCourier1" name="courierAddresses" value="addressCourier1" checked>
+              <input class="radio-button__input" type="radio" id="addressCourier1" name="courierAddresses" value="courierAddress1" checked>
               <span class="radio-button__checkmark"></span>
             </div>
             <label class="section__text" for="addressCourier1">Бишкек, улица Табышалиева, 57</label>
@@ -395,7 +395,7 @@
         <div class="popup__form-row">
           <div class="popup__address-wrapper">
             <div class="radio-button">
-              <input class="radio-button__input" type="radio" id="addressCourier2" name="courierAddresses" value="addressCourier2">
+              <input class="radio-button__input" type="radio" id="addressCourier2" name="courierAddresses" value="courierAddress2">
               <span class="radio-button__checkmark"></span>
             </div>
             <label class="section__text" for="addressCourier2">Бишкек, улица Жукеева-Пудовкина, 77/1</label>
@@ -405,7 +405,7 @@
         <div class="popup__form-row">
           <div class="popup__address-wrapper">
             <div class="radio-button">
-              <input class="radio-button__input" type="radio" id="addressCourier3" name="courierAddresses" value="addressCourier3">
+              <input class="radio-button__input" type="radio" id="addressCourier3" name="courierAddresses" value="courierAddress3">
               <span class="radio-button__checkmark"></span>
             </div>
             <label class="section__text" for="addressCourier3">Бишкек, микрорайон Джал, улица Ахунбаева Исы, 67/1</label>
@@ -418,14 +418,14 @@
         <div class="popup__form-row">
           <div class="popup__address-wrapper">
             <div class="radio-button">
-              <input class="radio-button__input" type="radio" id="addressPickup1" name="pickupAddresses" value="addressPickup1" checked>
+              <input class="radio-button__input" type="radio" id="addressPickup1" name="pickupAddresses" value="pickupAddress1" checked>
               <span class="radio-button__checkmark"></span>
             </div>
             <div class="popup__label-wrapper">
               <label class="section__text" for="addressPickup1">г. Бишкек, микрорайон Джал, улица Ахунбаева Исы, д. 67/1</label>
               <div class="popup__rating-wrapper">
                 <img class="popup__rating-icon" src="<%=require('./images/rating_icon.svg')%>" alt="Иконка рейтинга, звезда"/>
-                <span class="section__subtext">4.99</span>
+                <span class="section__subtext"></span>
                 <span class="section__subtext section__subtext_grey section__subtext_padding-left-4">Пункт выдачи</span>
               </div>
             </div>
@@ -435,7 +435,7 @@
         <div class="popup__form-row">
           <div class="popup__address-wrapper">
             <div class="radio-button">
-              <input class="radio-button__input" type="radio" id="addressPickup2" name="pickupAddresses" value="addressPickup2">
+              <input class="radio-button__input" type="radio" id="addressPickup2" name="pickupAddresses" value="pickupAddress2">
               <span class="radio-button__checkmark"></span>
             </div>
             <div class="popup__label-wrapper">
@@ -452,7 +452,7 @@
         <div class="popup__form-row">
           <div class="popup__address-wrapper">
             <div class="radio-button">
-              <input class="radio-button__input" type="radio" id="addressPickup3" name="pickupAddresses" value="addressPickup3">
+              <input class="radio-button__input" type="radio" id="addressPickup3" name="pickupAddresses" value="pickupAddress3">
               <span class="radio-button__checkmark"></span>
             </div>
             <div class="popup__label-wrapper">

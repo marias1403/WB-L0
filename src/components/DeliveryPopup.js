@@ -1,8 +1,10 @@
 import Popup from "./Popup";
 
 export default class DeliveryPopup extends Popup {
-  constructor(popupSelector) {
+  constructor(popupSelector, handlePickupMethodFormSubmit, handleCourierMethodFormSubmit) {
     super(popupSelector);
+    this._handlePickupMethodFormSubmit = handlePickupMethodFormSubmit;
+    this._handleCourierMethodFormSubmit = handleCourierMethodFormSubmit;
     this._btnPickupAddr = document.getElementById("btnPickupAddr");
     this._btnCourierAddr = document.getElementById("btnCourierAddr");
     this._pickupAddressesForm = document.getElementById("pickupAddressesForm");
@@ -48,21 +50,13 @@ export default class DeliveryPopup extends Popup {
 
     this._pickupAddressesForm.addEventListener("submit", (e) => {
       e.preventDefault();
-      const selectedOption = document.querySelector('input[name="pickupAddresses"]:checked');
-      if (selectedOption) {
-        const choiceValue = selectedOption.value;
-        console.log("Выбран вариант:", choiceValue);
-      }
+      this._handlePickupMethodFormSubmit();
       super.close();
     });
 
     this._courierAddressesForm.addEventListener("submit", (e) => {
       e.preventDefault();
-      const selectedOption = document.querySelector('input[name="courierAddresses"]:checked');
-      if (selectedOption) {
-        const choiceValue = selectedOption.value;
-        console.log("Выбран вариант:", choiceValue);
-      }
+      this._handleCourierMethodFormSubmit();
       super.close();
     });
 
