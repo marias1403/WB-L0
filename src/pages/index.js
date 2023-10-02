@@ -178,6 +178,27 @@ textsTooltipFreeReturn.forEach(text => {
   });
 });
 
+
+addEventListener("load", (event) => {
+  const checkboxSelectAllGoods = document.getElementById("checkboxSelectAllGoods");
+  const allCheckboxesSelectGoods = document.querySelectorAll(".cart-items-list__checkbox");
+
+  checkboxSelectAllGoods.addEventListener("change", () => {
+    let isChecked = checkboxSelectAllGoods.checked;
+    allCheckboxesSelectGoods.forEach((checkbox) => {
+      checkbox.checked = isChecked;
+    });
+    updateCartSummary();
+  });
+
+  allCheckboxesSelectGoods.forEach(function (checkbox) {
+    checkbox.addEventListener("change", function() {
+      checkboxSelectAllGoods.checked = !![...allCheckboxesSelectGoods].every(item => item.checked);
+      updateCartSummary();
+    });
+  });
+});
+
 const pluralizeGoods = function(count) {
   if (count === 0) {
     return 'товаров';
@@ -199,6 +220,10 @@ function updateCartSummary() {
   let totalQuantity = 0;
   for (let i = 0; i < listItems.length; i++) {
     const item = listItems[i];
+    const checkboxInput = item.querySelector(".cart-items-list__checkbox");
+    if (!checkboxInput.checked) {
+      continue;
+    }
     const price = item.getElementsByClassName('cart-items-list__price')[0].textContent.replace(/\s/g, '');
     const priceNoDiscount = item.getElementsByClassName('cart-items-list__old-price')[0].textContent.replace(/\s/g, '');
     const discount = price - priceNoDiscount;
