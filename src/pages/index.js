@@ -220,6 +220,8 @@ function updateCartSummary() {
   totalPriceInDropdown.textContent = totalPrice.toLocaleString('ru-RU');
   const totalQuantityInDropdown = document.getElementById("dropdownTotalQuantity");
   totalQuantityInDropdown.textContent = totalQuantity.toLocaleString('ru-RU');
+  const quantityHeadingInDropdown = document.getElementById("dropdownQuantityHeading");
+  quantityHeadingInDropdown.textContent = pluralizeGoods(totalQuantity);
 }
 
 function handleToggleLike(productElement) {
