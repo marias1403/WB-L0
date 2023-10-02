@@ -1,7 +1,7 @@
 import "./index.css";
-import ProductListItem from "../components/ProductListItem";
 import ProductList from "../components/ProductList";
 import CartProductListItem from "../components/CartProductListItem";
+import MissingProductListItem from "../components/MissingProductListItem";
 import FormValidator from "../components/FormValidator";
 import DeliveryPopup from "../components/DeliveryPopup";
 import PaymentPopup from "../components/PaymentPopup";
@@ -178,6 +178,50 @@ textsTooltipFreeReturn.forEach(text => {
   });
 });
 
+const pluralizeGoods = function(count) {
+  if (count === 0) {
+    return 'товаров';
+  } else if (count === 1) {
+    return 'товар';
+  } else if (count >= 2 && count <= 4) {
+    return 'товара';
+  } else {
+    return 'товаров';
+  }
+}
+
+function updateCartSummary() {
+  const productList = document.querySelector(".cart-contents__list");
+  const listItems = productList.getElementsByTagName('li');
+  let totalPrice = 0;
+  let totalPriceNoDiscount = 0;
+  let totalDiscount = 0;
+  let totalQuantity = 0;
+  for (let i = 0; i < listItems.length; i++) {
+    const item = listItems[i];
+    const price = item.getElementsByClassName('cart-items-list__price')[0].textContent.replace(/\s/g, '');
+    const priceNoDiscount = item.getElementsByClassName('cart-items-list__old-price')[0].textContent.replace(/\s/g, '');
+    const discount = price - priceNoDiscount;
+    const quantity = item.getElementsByClassName('quantity-input__count')[0].value;
+    totalPrice += +price;
+    totalPriceNoDiscount += +priceNoDiscount;
+    totalDiscount += +discount;
+    totalQuantity += +quantity;
+  }
+  const totalPriceHTMLElement = document.getElementById("totalPrice");
+  totalPriceHTMLElement.textContent = totalPrice.toLocaleString('ru-RU');
+  const totalNoDiscountHTMLElement = document.getElementById("totalPriceNoDiscount");
+  totalNoDiscountHTMLElement.textContent = totalPriceNoDiscount.toLocaleString('ru-RU');
+  const totalDiscountHTMLElement = document.getElementById("totalDiscount");
+  totalDiscountHTMLElement.textContent = totalDiscount.toLocaleString('ru-RU');
+  const totalQuantityHTMLElement = document.getElementById("totalQuantity");
+  totalQuantityHTMLElement.textContent = totalQuantity.toLocaleString('ru-RU');
+  const totalPriceInDropdown = document.getElementById("dropdownTotalPrice");
+  totalPriceInDropdown.textContent = totalPrice.toLocaleString('ru-RU');
+  const totalQuantityInDropdown = document.getElementById("dropdownTotalQuantity");
+  totalQuantityInDropdown.textContent = totalQuantity.toLocaleString('ru-RU');
+}
+
 function handleToggleLike(productElement) {
   productElement.handleToggleLike();
 }
@@ -185,8 +229,8 @@ function handleDeleteClick(productElement) {
   productElement.handleDeleteProduct();
 }
 
-function createCartProduct({ data, templateSelector }, handleToggleLike, handleDeleteClick) {
-  const cartProduct = new CartProductListItem({ data, templateSelector }, handleToggleLike, handleDeleteClick);
+function createCartProduct({ data, templateSelector }, handleToggleLike, handleDeleteClick, updateCartSummary) {
+  const cartProduct = new CartProductListItem({ data, templateSelector }, handleToggleLike, handleDeleteClick, updateCartSummary);
   return cartProduct.generateProductItem();
 }
 
@@ -195,33 +239,39 @@ const cartProductList = new ProductList({
     const cartProductElement = createCartProduct({
       data,
       templateSelector: ".template"
-    }, handleToggleLike, handleDeleteClick);
+    }, handleToggleLike, handleDeleteClick, updateCartSummary);
 
     cartProductList.addItem(cartProductElement);
   }
 }, ".cart-items-list");
 
 cartProductList.renderItems(cartProductsData);
+updateCartSummary();
 
-function createMissingProduct({ data, templateSelector }, handleToggleLike, handleDeleteClick) {
-  const missingProduct = new ProductListItem({ data, templateSelector }, handleToggleLike, handleDeleteClick);
+function updateMissingGoodsQuantity() {
+  const productList = document.querySelector(".cart-items-list_missing-goods");
+  const listItems = productList.getElementsByTagName('li');
+  const missingGoodsQuantity = listItems.length;
+  const missingGoodsHTMLElement = document.getElementById("dropdownMissingGoods");
+  missingGoodsHTMLElement.textContent = missingGoodsQuantity.toString();
+  const missingGoodsHeadingHTMLElement = document.getElementById("dropdownMissingHeading");
+  missingGoodsHeadingHTMLElement.textContent = pluralizeGoods(missingGoodsQuantity);
+}
+
+function createMissingProduct({ data, templateSelector }, handleToggleLike, handleDeleteClick, updateMissingGoodsQuantity) {
+  const missingProduct = new MissingProductListItem({ data, templateSelector }, handleToggleLike, handleDeleteClick, updateMissingGoodsQuantity);
   return missingProduct.generateProductItem();
 }
 
 const missingProductList = new ProductList({
-  renderer: (productData) => {
+  renderer: (data) => {
     const missingProductElement = createMissingProduct({
-      data: {
-        id: productData.id,
-        name: productData.name,
-        image: productData.image,
-        color: productData.color,
-        size: productData.size,
-      },
+      data,
       templateSelector: ".template-missing-item"
-    }, handleToggleLike, handleDeleteClick);
+    }, handleToggleLike, handleDeleteClick, updateMissingGoodsQuantity);
     missingProductList.addItem(missingProductElement);
   }
 }, ".cart-items-list_missing-goods");
 
 missingProductList.renderItems(missingProductData);
+updateMissingGoodsQuantity();

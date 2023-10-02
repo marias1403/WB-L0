@@ -1,5 +1,5 @@
-.cart-contents__title {
-  display: none;
+.absent-goods__dropdown-title {
+  display: flex;
   flex-direction: row;
   align-items: center;
   justify-content: flex-start;

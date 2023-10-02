@@ -62,10 +62,16 @@
             <section class="cart-contents section content__section">
               <h1 class="section__main-title">Корзина</h1>
               <div class="cart-contents__wrapper">
-                <h2 class="section__subtitle section__subtitle_semibold cart-contents__title" id="dropdownTitle1">266 товаров &#183; 2 100 569 сом</h2>
+                <div class="cart-contents__title" id="dropdownTitle1">
+                  <h2 class="section__subtitle section__subtitle_semibold" id="dropdownTotalQuantity">266</h2>
+                  <h2 class="section__subtitle section__subtitle_semibold">товаров</h2>
+                  <h2 class="section__subtitle section__subtitle_semibold">&#183;</h2>
+                  <h2 class="section__subtitle section__subtitle_semibold" id="dropdownTotalPrice">2 100 569</h2>
+                  <h2 class="section__subtitle section__subtitle_semibold">сом</h2>
+                </div>
                 <div class="cart-contents__select-all-checkbox-wrapper" id="selectAllCheckbox">
                   <div class="checkbox">
-                    <input type="checkbox" class="checkbox__input" id="selectAllGoods">
+                    <input type="checkbox" class="checkbox__input" id="selectAllGoods" checked>
                     <span class="checkbox__checkmark"></span>
                   </div>
                   <label class="section__text" for="selectAllGoods">Выбрать все</label>
@@ -77,7 +83,12 @@
             </section>
             <section class="absent-goods content__section section">
               <div class="absent-goods__title-wrapper">
-                <h2 class="section__subtitle section__subtitle_semibold">Отсутствуют &#183; 3 товара</h2>
+                <div class="absent-goods__dropdown-title">
+                  <h2 class="section__subtitle section__subtitle_semibold">Отсутствуют</h2>
+                  <h2 class="section__subtitle section__subtitle_semibold">&#183;</h2>
+                  <h2 class="section__subtitle section__subtitle_semibold" id="dropdownMissingGoods">3</h2>
+                  <h2 class="section__subtitle section__subtitle_semibold" id="dropdownMissingHeading">товара</h2>
+                </div>
                 <button class="dropdown__button button" id="btnDropdown2"></button>
               </div>
               <div class="divider-line divider-line_cart-contents" id="dividerLine2"></div>
@@ -230,15 +241,27 @@
           <div class="order-summary__cost-details">
             <div class="info-block__title-wrapper">
               <h2 class="section__title section__title_cost-details">Итого</h2>
-              <h2 class="section__title section__title_cost-details">2 101 063<span class="section__title section__title_cost-details section__title_currency">сом</span></h2>
+              <div class="order-summary__total-price-wrapper">
+                <h2 class="section__title section__title_cost-details" id="totalPrice">2 101 063</h2>
+                <span class="section__title section__title_cost-details section__title_currency">сом</span>
+              </div>
             </div>
             <div class="order-summary__cost-detail-row">
-              <p class="section__text">203 товара</p>
-              <p class="section__text">2 302 048 сом</p>
+              <div class="order-summary__details-wrapper">
+                <p class="section__text" id="totalQuantity">203</p>
+                <p class="section__text">товара</p>
+              </div>
+              <div class="order-summary__details-wrapper">
+                <p class="section__text" id="totalPriceNoDiscount">2 302 048</p>
+                <p class="section__text">сом</p>
+              </div>
             </div>
             <div class="order-summary__cost-detail-row">
               <p class="section__text">Скидка</p>
-              <p class="section__text">−200 985 сом</p>
+              <div class="order-summary__details-wrapper">
+                <p class="section__text" id="totalDiscount">−200 985</p>
+                <p class="section__text">сом</p>
+              </div>
             </div>
             <div class="order-summary__cost-detail-row">
               <p class="section__text">Доставка</p>
@@ -483,7 +506,7 @@
       <div class="cart-items-list__content-wrapper cart-items-list__content-wrapper_in-stock">
         <span class="item-size-badge item-size-badge_goods cart-items-list__size"></span>
         <div class="checkbox checkbox_position">
-          <input class="checkbox__input cart-items-list__checkbox" type="checkbox" id="#">
+          <input class="checkbox__input cart-items-list__checkbox" type="checkbox" id="#" checked>
           <span class="checkbox__checkmark checkbox__checkmark_list"></span>
         </div>
         <img class="cart-items-list__item-photo" src="#" alt="#" />
