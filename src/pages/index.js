@@ -218,6 +218,7 @@ function updateCartSummary() {
   let totalPriceNoDiscount = 0;
   let totalDiscount = 0;
   let totalQuantity = 0;
+  let badgeQuantity = 0;
   for (let i = 0; i < listItems.length; i++) {
     const item = listItems[i];
     const checkboxInput = item.querySelector(".cart-items-list__checkbox");
@@ -232,6 +233,7 @@ function updateCartSummary() {
     totalPriceNoDiscount += +priceNoDiscount;
     totalDiscount += +discount;
     totalQuantity += +quantity;
+    badgeQuantity++;
   }
   const totalPriceHTMLElement = document.getElementById("totalPrice");
   totalPriceHTMLElement.textContent = totalPrice.toLocaleString('ru-RU');
@@ -247,6 +249,10 @@ function updateCartSummary() {
   totalQuantityInDropdown.textContent = totalQuantity.toLocaleString('ru-RU');
   const quantityHeadingInDropdown = document.getElementById("dropdownQuantityHeading");
   quantityHeadingInDropdown.textContent = pluralizeGoods(totalQuantity);
+  const cartBadgeQuantity = document.querySelector(".item-count-badge_header");
+  cartBadgeQuantity.textContent = badgeQuantity.toString();
+  const mobileCartBadgeQuantity = document.querySelector(".item-count-badge_mobile-nav");
+  mobileCartBadgeQuantity.textContent = badgeQuantity.toString();
 }
 
 function handleToggleLike(productElement) {
