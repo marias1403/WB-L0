@@ -24,12 +24,20 @@ export default class ProductListItem {
   }
 
   setEventListeners() {
-    this._buttonPutLike.addEventListener('click', () => {
+    this._buttonPutLike.addEventListener("click", () => {
       this._handleToggleLike(this);
     });
 
-    this._buttonDelete.addEventListener('click', () => {
+    this._buttonDelete.addEventListener("click", () => {
       this._handleDeleteClick(this);
+    });
+
+    this._likeDeleteButtons.addEventListener("mouseover", () => {
+      this._likeDeleteButtons.style.opacity = "1";
+    });
+
+    this._likeDeleteButtons.addEventListener("mouseout", () => {
+      this._likeDeleteButtons.style.opacity = "0";
     });
   }
 
@@ -60,8 +68,9 @@ export default class ProductListItem {
       this._element.querySelector(".cart-items-list__description").style.display = "none";
     }
 
-    this._buttonPutLike = this._element.querySelector('.cart-items-list__like-button');
-    this._buttonDelete = this._element.querySelector('.cart-items-list__delete-button');
+    this._buttonPutLike = this._element.querySelector(".cart-items-list__like-button");
+    this._buttonDelete = this._element.querySelector(".cart-items-list__delete-button");
+    this._likeDeleteButtons = this._element.querySelector(".cart-items-list__like-delete-buttons");
 
     this.setEventListeners();
 

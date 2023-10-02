@@ -4,6 +4,7 @@
   align-items: center;
   justify-content: flex-end;
   gap: 16px;
+  opacity: 0;
 }
 
 @media screen and (max-width: 1023px) {
