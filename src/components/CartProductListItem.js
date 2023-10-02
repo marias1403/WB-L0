@@ -1,9 +1,16 @@
 import ProductListItem from "./ProductListItem";
 
 export default class CartProductListItem extends ProductListItem {
-  constructor({ data, templateSelector }, handleToggleLike, handleDeleteClick, updateCartSummary) {
+  constructor({ data, templateSelector }, handleToggleLike, handleDeleteClick, updateCartSummary, updateDeliveryInfo) {
     super({ data, templateSelector }, handleToggleLike, handleDeleteClick);
     this._updateCartSummary = updateCartSummary;
+    this._updateDeliveryInfo = updateDeliveryInfo;
+  }
+
+  handleDeleteProduct() {
+    super.handleDeleteProduct();
+    this._updateCartSummary();
+    this._updateDeliveryInfo();
   }
 
   _setPrice(quantity) {
@@ -43,6 +50,7 @@ export default class CartProductListItem extends ProductListItem {
       this._setDiscountSum(this._quantityInput.value);
       this._setUserDiscountSum(this._quantityInput.value);
       this._updateCartSummary();
+      this._updateDeliveryInfo();
     }
     this._btnIncreaseQuantity.disabled = parseInt(this._quantityInput.value) >= this._data.remainingGoods;
   }
@@ -56,6 +64,7 @@ export default class CartProductListItem extends ProductListItem {
       this._setDiscountSum(this._quantityInput.value);
       this._setUserDiscountSum(this._quantityInput.value);
       this._updateCartSummary();
+      this._updateDeliveryInfo();
     }
     this._btnDecreaseQuantity.disabled = parseInt(this._quantityInput.value) <= 1;
   }

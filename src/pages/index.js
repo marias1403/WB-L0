@@ -189,12 +189,14 @@ addEventListener("load", (event) => {
       checkbox.checked = isChecked;
     });
     updateCartSummary();
+    updateDeliveryInfo();
   });
 
   allCheckboxesSelectGoods.forEach(function (checkbox) {
     checkbox.addEventListener("change", function() {
       checkboxSelectAllGoods.checked = !![...allCheckboxesSelectGoods].every(item => item.checked);
       updateCartSummary();
+      updateDeliveryInfo();
     });
   });
 });
@@ -255,6 +257,56 @@ function updateCartSummary() {
   mobileCartBadgeQuantity.textContent = badgeQuantity.toString();
 }
 
+function updateDeliveryInfo() {
+  const deliveryProductList = document.getElementById("deliveryProductList1");
+  deliveryProductList.innerHTML = "";
+  const productList = document.querySelector(".cart-contents__list");
+  const listItems = productList.getElementsByTagName("li");
+  let totalQuantity = 0;
+  for (let i = 0; i < listItems.length; i++) {
+    const item = listItems[i];
+    const checkboxInput = item.querySelector(".cart-items-list__checkbox");
+    if (!checkboxInput.checked) {
+      continue;
+    }
+    const quantity = item.getElementsByClassName("quantity-input__count")[0].value;
+    const imgSrc = item.getElementsByClassName("cart-items-list__item-photo")[0].src;
+    const imgAlt = item.getElementsByClassName("cart-items-list__item-photo")[0].alt;
+    totalQuantity += +quantity;
+
+    const listItem = document.createElement("li");
+    listItem.classList.add("delivery-method__goods-photo-item");
+
+    const itemCountBadge = document.createElement("span");
+    itemCountBadge.classList.add("item-count-badge", "item-count-badge_delivery-method");
+    itemCountBadge.textContent = quantity.toLocaleString("ru-RU");
+    if (quantity === "1") {
+      itemCountBadge.style.display = "none";
+    } else {
+      itemCountBadge.style.display = "inline-flex";
+    }
+
+    const imgElement = document.createElement("img");
+    imgElement.classList.add("delivery-method__goods-photo-img");
+    imgElement.src = imgSrc;
+    imgElement.alt = imgAlt;
+
+    listItem.appendChild(itemCountBadge);
+    listItem.appendChild(imgElement);
+
+    deliveryProductList.appendChild(listItem);
+  }
+  const deliveryRow1 = document.getElementById("deliveryRow1");
+  const deliveryRow2 = document.getElementById("deliveryRow2");
+  if (totalQuantity === 0) {
+    deliveryRow1.style.display = "none";
+    deliveryRow2.style.display = "none";
+  } else {
+    deliveryRow1.style.display = "flex";
+    deliveryRow2.style.display = "flex";
+  }
+}
+
 function handleToggleLike(productElement) {
   productElement.handleToggleLike();
 }
@@ -262,8 +314,8 @@ function handleDeleteClick(productElement) {
   productElement.handleDeleteProduct();
 }
 
-function createCartProduct({ data, templateSelector }, handleToggleLike, handleDeleteClick, updateCartSummary) {
-  const cartProduct = new CartProductListItem({ data, templateSelector }, handleToggleLike, handleDeleteClick, updateCartSummary);
+function createCartProduct({ data, templateSelector }, handleToggleLike, handleDeleteClick, updateCartSummary, updateDeliveryInfo) {
+  const cartProduct = new CartProductListItem({ data, templateSelector }, handleToggleLike, handleDeleteClick, updateCartSummary, updateDeliveryInfo);
   return cartProduct.generateProductItem();
 }
 
@@ -272,7 +324,7 @@ const cartProductList = new ProductList({
     const cartProductElement = createCartProduct({
       data,
       templateSelector: ".template"
-    }, handleToggleLike, handleDeleteClick, updateCartSummary);
+    }, handleToggleLike, handleDeleteClick, updateCartSummary, updateDeliveryInfo);
 
     cartProductList.addItem(cartProductElement);
   }
@@ -280,6 +332,7 @@ const cartProductList = new ProductList({
 
 cartProductList.renderItems(cartProductsData);
 updateCartSummary();
+updateDeliveryInfo();
 
 function updateMissingGoodsQuantity() {
   const productList = document.querySelector(".cart-items-list_missing-goods");
