@@ -201,15 +201,15 @@ addEventListener("load", (event) => {
   });
 });
 
-const pluralizeGoods = function(count) {
-  if (count === 0) {
-    return 'товаров';
-  } else if (count === 1) {
-    return 'товар';
-  } else if (count >= 2 && count <= 4) {
-    return 'товара';
+const pluralizeGoods = function(number, word) {
+  if (number === 1) {
+    return word;
+  } else if (number % 10 === 1 && number % 100 !== 11) {
+    return word;
+  } else if (number % 10 >= 2 && number % 10 <= 4 && (number % 100 < 10 || number % 100 >= 20)) {
+    return word + 'а';
   } else {
-    return 'товаров';
+    return word + 'ов';
   }
 }
 
@@ -245,12 +245,14 @@ function updateCartSummary() {
   totalDiscountHTMLElement.textContent = totalDiscount.toLocaleString('ru-RU');
   const totalQuantityHTMLElement = document.getElementById("totalQuantity");
   totalQuantityHTMLElement.textContent = totalQuantity.toLocaleString('ru-RU');
+  const totalQuantityWordForGoods = document.getElementById("wordForTotalQuantity");
+  totalQuantityWordForGoods.textContent = pluralizeGoods(totalQuantity, "товар");
   const totalPriceInDropdown = document.getElementById("dropdownTotalPrice");
   totalPriceInDropdown.textContent = totalPrice.toLocaleString('ru-RU');
   const totalQuantityInDropdown = document.getElementById("dropdownTotalQuantity");
   totalQuantityInDropdown.textContent = totalQuantity.toLocaleString('ru-RU');
   const quantityHeadingInDropdown = document.getElementById("dropdownQuantityHeading");
-  quantityHeadingInDropdown.textContent = pluralizeGoods(totalQuantity);
+  quantityHeadingInDropdown.textContent = pluralizeGoods(totalQuantity, "товар");
   const cartBadgeQuantity = document.querySelector(".item-count-badge_header");
   cartBadgeQuantity.textContent = badgeQuantity.toString();
   const mobileCartBadgeQuantity = document.querySelector(".item-count-badge_mobile-nav");
@@ -353,7 +355,7 @@ function updateMissingGoodsQuantity() {
   const missingGoodsHTMLElement = document.getElementById("dropdownMissingGoods");
   missingGoodsHTMLElement.textContent = missingGoodsQuantity.toString();
   const missingGoodsHeadingHTMLElement = document.getElementById("dropdownMissingHeading");
-  missingGoodsHeadingHTMLElement.textContent = pluralizeGoods(missingGoodsQuantity);
+  missingGoodsHeadingHTMLElement.textContent = pluralizeGoods(missingGoodsQuantity, "товар");
 }
 
 function createMissingProduct({ data, templateSelector }, handleToggleLike, handleDeleteClick, updateMissingGoodsQuantity) {
