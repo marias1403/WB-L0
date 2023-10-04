@@ -32,11 +32,11 @@ export default class ProductListItem {
       this._handleDeleteClick(this);
     });
 
-    this._likeDeleteButtons.addEventListener("mouseover", () => {
+    this._element.addEventListener("mouseover", () => {
       this._likeDeleteButtons.style.opacity = "1";
     });
 
-    this._likeDeleteButtons.addEventListener("mouseout", () => {
+    this._element.addEventListener("mouseout", () => {
       this._likeDeleteButtons.style.opacity = "0";
     });
   }
