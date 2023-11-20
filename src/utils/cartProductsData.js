@@ -1,6 +1,6 @@
-import tShirtImg from "../images/tshirt_UZcotton.jpg";
-import phoneCaseImg from "../images/cardholder.jpg";
-import pencilsImg from "../images/faber_castell.jpg";
+import tShirtImg from "../images/tshirt.png";
+import phoneCaseImg from "../images/case.png";
+import pencilsImg from "../images/pensils.png";
 
 export const cartProductsData = [
   {
